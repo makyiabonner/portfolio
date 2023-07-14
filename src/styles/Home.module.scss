@@ -7,13 +7,13 @@
   align-items: center;
   justify-content: space-between;
   padding:10px 20px;
-  background-color: #012b4b;
-  color:white;
+  background-color: $brand-primary;
+  color:$brand-info;
   gap:10px;
 }
 .main{
   height: 700px;
-  background-color: #012b4b;
+  background-color: $brand-primary;
   display: flex;
   align-items: center;
   padding:30px;
@@ -34,7 +34,7 @@
   font-size: 40px;
 }
 .secondMain{
-  background-color: white;
+  background-color: $brand-info;
   height:700px;
   width:100%;
   padding:auto;
@@ -54,7 +54,7 @@
 }
 .subtitle{
   font-family: 'Bacasime Antique', serif;
-  color:#FF0505;
+  color:$brand-secondary;
 }
 .aboutDiv{
   display: flex;
@@ -62,7 +62,7 @@
   align-items: center;
   gap: 2em;
   justify-content: center;
-  background-color: white;
+  background-color: $brand-info;
   padding: clamp(30px, .5em, 70px);
   padding-top: 4em;
   padding-bottom: 4em;
@@ -74,6 +74,6 @@
   width: 90%;
 }
 .footer{
-  background: linear-gradient(#012b4b, black);
+  background: linear-gradient($brand-primary, black);
   height:400px;
 }
