@@ -1,3 +1,4 @@
+import TechStack from '@/components/TechStack/techStack';
 import Head from 'next/head'
 import NewNav from '../components/NewNav/newNav';
 import styles from '../styles/Home.module.scss';
@@ -51,11 +52,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className={styles.thirdMain}>
-        <div>
-          <h2>Projects</h2>
-        </div>
-      </section>
+      <TechStack/>
       <section className={styles.fourthMain}>
         <div>
           <h2>Contact</h2>
