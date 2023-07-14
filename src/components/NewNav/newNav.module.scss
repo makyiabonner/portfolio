@@ -1,9 +1,11 @@
+@import '../../styles/variables.scss';
+
 .nav,.div{
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
     padding:10px 20px;
-    background-color: #012b4b;
+    background-color: $brand-primary;
     color:white;
   }
   .nav{

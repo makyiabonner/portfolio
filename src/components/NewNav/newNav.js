@@ -1,7 +1,8 @@
-import styles from '../NewNav/newNav.module.scss';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import styles from '../NewNav/newNav.module.scss'
+
 
 export default function NewNav(){
     const [show, setShow] = useState(false);
@@ -9,22 +10,22 @@ export default function NewNav(){
     const handleShow = () => setShow(true);
     return (
         <>
-            <nav className={styles.nav}>
+            <nav className={`${styles.nav} bg-primary`}>
                 <h1 className={styles.title}>MB</h1>
-                    <Button variant="primary" onClick={handleShow} className="d-sm-flex d-md-none">
+                    <Button variant='primary' onClick={handleShow} className="d-sm-flex d-md-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg>
                     </Button>
 
-                    <Offcanvas show={show} onHide={handleClose} className="w-50">
-                        <Offcanvas.Header closeButton>
+                    <Offcanvas show={show} onHide={handleClose} className="w-50 bg-primary">
+                        <Offcanvas.Header className="variant-info" closeButton>
                         <Offcanvas.Title>
-                            <h1 className={styles.title}>MB</h1>
+                            <h1 className={`${styles.title} text-info`}>MB</h1>
                         </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
-                        <ul className={`${styles.navList} d-block`}>
+                        <ul className={`${styles.navList} d-block text-info`}>
                             <li className={styles.navItem}>Home</li>
                             <li className={styles.navItem}>About</li>
                             <li className={styles.navItem}>Works</li>

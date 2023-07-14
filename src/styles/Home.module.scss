@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Raleway:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap');
-
+@import '../styles/variables.scss';
 .div{
   display: flex;
   flex-direction: row;
@@ -19,11 +19,12 @@
   padding:30px;
 }
 .landingTitle{
-  color:white;
+  font-family: 'Bacasime Antique', serif;
+  color:$brand-info;
   font-size: clamp(23px,6vw,70px);
 }
 .landingSubtitle{
-  color:red;
+  color:$brand-secondary;
   font-size: clamp(10px,5vw,40px);
 }
 .secondMain,.thirdMain,.fourthMain{

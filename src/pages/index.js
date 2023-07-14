@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import 'bootstrap/scss/bootstrap.scss';
-import styles from '@/styles/Home.module.scss';
 import NewNav from '../components/NewNav/newNav';
-
+import styles from '../styles/Home.module.scss';
 
 
 export default function Home() {
