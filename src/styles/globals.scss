@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+$theme-colors: (
+  "primary": $brand-primary,
+  "secondary": $brand-secondary,
+  "info": $brand-info
+);
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
