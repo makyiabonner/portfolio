@@ -20,7 +20,7 @@
   gap:20px;
   margin-right:40px;
 }
-.title{
+.title,.subtitle{
   font-family: 'Bacasime Antique', serif;
 }
 .navItem{
@@ -62,10 +62,46 @@
   align-items:flex-start;
   justify-content: center;
   font-size: 40px;
+}
+.secondMain{
+  background-color: white;
   height:700px;
+  width:100%;
+  padding:auto;
+  margin: auto;
+}
+.thirdMain,.fourthMain{
+  height:700px;
+  width:100%;
+  padding:auto;
+  margin: auto;
 }
 .thirdMain{
-  background-color: #012b4b;
+  background-color: red;
+}
+.fourthMain{
+  background-color: blue;
+}
+.subtitle{
+  font-family: 'Bacasime Antique', serif;
+  color:#FF0505;
+}
+.aboutDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  justify-content: center;
+  background-color: white;
+  padding: clamp(30px, .5em, 70px);
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.p{
+  font-size: clamp(16px,.5em,30px);
+  font-family: 'Raleway', sans-serif;
+  color:#986262;
+  width: 90%;
 }
 .footer{
   background: linear-gradient(#012b4b, black);
