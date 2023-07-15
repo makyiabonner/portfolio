@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+
+
+.fourthMain{
+    display:flex;
+    align-items:flex-start;
+    justify-content: center;
+    font-size: 40px;
+    width:100%;
+    padding:auto;
+    margin: auto;
+  }
+  .subtitle{
+    font-family: 'Bacasime Antique', serif;
+    color:$brand-secondary;
+    margin: 80px auto;
+  }
+  .div{
+    height:70%;
+    width:73%;
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+  }
+  .img{
+    width: 400px;
+    height: 250px;
+    background-color: red;
+  }
+  .project{
+    display: inline-flex;
+    background-color: $brand-info;
+    box-shadow: 0 5px 15px grey;
+    border-radius: 5px;
+    height: fit-content;
+    padding:10px;
+    width: 80%;
+  }
+  .p{
+    font-size:20px;
+    padding:0 80px;
+    text-align: center;
+  }
+  
