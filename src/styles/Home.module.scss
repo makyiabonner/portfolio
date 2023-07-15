@@ -11,7 +11,7 @@
   color:$brand-info;
   gap:10px;
 }
-.main{
+.landingSection{
   height: 700px;
   background-color: $brand-primary;
   display: flex;
@@ -27,7 +27,7 @@
   color:$brand-secondary;
   font-size: clamp(10px,5vw,40px);
 }
-.secondMain,.thirdMain,.fourthMain{
+.secondMain,.fourthMain{
   display:flex;
   align-items:flex-start;
   justify-content: center;
@@ -35,19 +35,15 @@
 }
 .secondMain{
   background-color: $brand-info;
-  height:700px;
   width:100%;
   padding:auto;
   margin: auto;
 }
-.thirdMain,.fourthMain{
+.fourthMain{
   height:700px;
   width:100%;
   padding:auto;
   margin: auto;
-}
-.thirdMain{
-  background-color: red;
 }
 .fourthMain{
   background-color: blue;
@@ -71,7 +67,8 @@
   font-size: clamp(16px,.5em,30px);
   font-family: 'Raleway', sans-serif;
   color:#986262;
-  width: 90%;
+  width: 80%;
+  padding:0 60px;
 }
 .footer{
   background: linear-gradient($brand-primary, black);
