@@ -39,14 +39,11 @@
   padding:auto;
   margin: auto;
 }
-.thirdMain,.fourthMain{
+.fourthMain{
   height:700px;
   width:100%;
   padding:auto;
   margin: auto;
-}
-.thirdMain{
-  background-color: red;
 }
 .fourthMain{
   background-color: blue;
@@ -70,7 +67,8 @@
   font-size: clamp(16px,.5em,30px);
   font-family: 'Raleway', sans-serif;
   color:#986262;
-  width: 90%;
+  width: 80%;
+  padding:0 60px;
 }
 .footer{
   background: linear-gradient($brand-primary, black);
