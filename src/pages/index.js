@@ -46,7 +46,7 @@ export default function Home() {
       <section className={styles.secondMain}>
         <div className={styles.aboutDiv}>
           <h2 className={styles.subtitle}>About Me</h2>
-          <p className={styles.p}>
+          <p className={`${styles.p} fs-5`}>
             As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
             My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
             or indulging in my love for anime. I'm currently watching on the <i>"Hell's Paradise"</i> – definitely a good watch. 

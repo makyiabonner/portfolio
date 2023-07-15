@@ -46,11 +46,11 @@ export default function Projects(){
 
     return(
         <section className={`${styles.fourthMain} d-block p-5`}>
-          <h2 className='text-center m-5'>Projects</h2>
+          <h2 className={`${styles.subtitle} text-center m-5`}>Projects</h2>
           <div className={`${styles.div} bg-info p-5 m-auto d-flex flex-column gap-5 align-items-center`}>
             {projects.map((project) => {
                     return (
-                        <div className={(project.id % 2 === 0)
+                        <div id={project.id} className={(project.id % 2 === 0)
                               ? `${styles.project} flex-lg-row-reverse flex-column p-4`
                               : `${styles.project} flex-column flex-lg-row justify-content-evenly p-4`
                         }>
@@ -65,8 +65,8 @@ export default function Projects(){
                             </div>
                           </div>
                         </div>)
-                    }
-              )}
+                      }
+                    )}
           </div>
         </section>
     )
