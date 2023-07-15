@@ -25,28 +25,6 @@
 }
 .landingSubtitle{
   color:$brand-secondary;
-  font-size: clamp(10px,5vw,40px);
-}
-.secondMain,.fourthMain{
-  display:flex;
-  align-items:flex-start;
-  justify-content: center;
-  font-size: 40px;
-}
-.secondMain{
-  background-color: $brand-info;
-  width:100%;
-  padding:auto;
-  margin: auto;
-}
-.fourthMain{
-  height:700px;
-  width:100%;
-  padding:auto;
-  margin: auto;
-}
-.fourthMain{
-  background-color: blue;
 }
 .subtitle{
   font-family: 'Bacasime Antique', serif;
@@ -67,8 +45,7 @@
   font-size: clamp(16px,.5em,30px);
   font-family: 'Raleway', sans-serif;
   color:#986262;
-  width: 80%;
-  padding:0 60px;
+  width: 70%;
 }
 .footer{
   background: linear-gradient($brand-primary, black);
