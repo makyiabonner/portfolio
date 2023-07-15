@@ -7,7 +7,7 @@
     justify-content: center;
     background-color: ghostwhite;
     width:100%;
-    padding:60px;
+    padding:clamp(30px,2vw,60px);
 }
 .subtitle{
     font-family: 'Bacasime Antique', serif;
@@ -19,7 +19,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap:70px;
     background-color: white;
-    padding:60px;
+    padding:clamp(20px,6vw, 80px);
     border-radius:5px;
-    width:90%;
+    width:70%;
 }
