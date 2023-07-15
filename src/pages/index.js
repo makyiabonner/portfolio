@@ -1,3 +1,4 @@
+import Projects from '@/components/Projects/projects';
 import TechStack from '@/components/TechStack/techStack';
 import Head from 'next/head'
 import NewNav from '../components/NewNav/newNav';
@@ -45,7 +46,7 @@ export default function Home() {
       <section className={styles.secondMain}>
         <div className={styles.aboutDiv}>
           <h2 className={styles.subtitle}>About Me</h2>
-          <p className={styles.p}>
+          <p className={`${styles.p} fs-5`}>
             As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
             My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
             or indulging in my love for anime. I'm currently watching on the <i>"Hell's Paradise"</i> – definitely a good watch. 
@@ -53,11 +54,7 @@ export default function Home() {
         </div>
       </section>
       <TechStack/>
-      <section className={styles.fourthMain}>
-        <div>
-          <h2>Contact</h2>
-        </div>
-      </section>
+      <Projects/>
       <div id='divider'>
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style={{display: "block"}}>
           <path d="M1200 0L0 103.52 0 120 1200 120 1200 0z" class="shape-fill" fill="#012b4b"></path>
