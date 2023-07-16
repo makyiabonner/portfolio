@@ -1,3 +1,4 @@
+import ContactForm from '@/components/Contact/contact';
 import Projects from '@/components/Projects/projects';
 import TechStack from '@/components/TechStack/techStack';
 import Head from 'next/head'
@@ -55,15 +56,13 @@ export default function Home() {
       </section>
       <TechStack/>
       <Projects/>
+      <ContactForm/> 
       <div id='divider'>
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style={{display: "block"}}>
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style={{display: "block", background:'ghostwhite'}}>
           <path d="M1200 0L0 103.52 0 120 1200 120 1200 0z" class="shape-fill" fill="#012b4b"></path>
         </svg>
       </div>
       <footer className={styles.footer}>
-        <div>
-          
-        </div>
       </footer>
     </>
   )
