@@ -48,7 +48,7 @@ export default function Home() {
       <section className={styles.secondMain}>
         <div className={styles.aboutDiv}>
           <h2 className={styles.subtitle}>About Me</h2>
-          <p className={`${styles.p} fs-5`}>
+          <p className={`${styles.p} p-xl-5`}>
             As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
             My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
             or indulging in my love for anime. I'm currently watching on the <i>"Hell's Paradise"</i> – definitely a good watch. 
@@ -64,7 +64,7 @@ export default function Home() {
         </svg>
       </div>
       <footer className={`${styles.footer} p-1`}>
-        <section className='d-flex w-100 p-5 justify-content-evenly'>
+        <section className='d-flex w-100 p-sm-3 p-md-0 justify-content-evenly'>
           <div>
             <h6 className={`${styles.listTitle} fs-5 text-info`}>Navigation</h6>
             <ul className={styles.list}>
@@ -76,11 +76,11 @@ export default function Home() {
             </ul>
           </div>
           <div>
-            <p className={`${styles.listTitle} fs-5 text-info`}>External Accounts</p>
+            <h6 className={`${styles.listTitle} fs-5 text-info`}>External Accounts</h6>
             <ul className={styles.list}>
-              <li><span className={`${styles.listItem} fs-6 text-info`}>Github</span></li>
-              <li><span className={`${styles.listItem} fs-6 text-info`}>LinkedIn</span></li>
-              <li><span className={`${styles.listItem} fs-6 text-info`}>CV Resume</span></li>
+              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Github</span></li>
+              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>LinkedIn</span></li>
+              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>CV Resume</span></li>
             </ul>
           </div>
         </section>
