@@ -26,7 +26,7 @@ export default function TechStack(){
                     {languages.map((language) =>{
                         return (
                             <Card id={language.id} 
-                                  style={{ width: 'clamp(50px, 9vw, 100px)', background:'white',
+                                  style={{ width: 'clamp(30px, 9vw, 100px)', background:'white',
                                            padding:"3px", boxShadow:'0px 5px 13px black', 
                                            display:'flex', alignSelf:'center', justifySelf:'center' }}>
                                 <Card.Img variant="top" src={language.link} alt={language.id}/>
