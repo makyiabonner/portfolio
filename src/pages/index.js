@@ -7,6 +7,7 @@ import styles from '../styles/Home.module.scss';
 
 
 export default function Home() {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <Head>
@@ -62,7 +63,28 @@ export default function Home() {
           <path d="M1200 0L0 103.52 0 120 1200 120 1200 0z" class="shape-fill" fill="#012b4b"></path>
         </svg>
       </div>
-      <footer className={styles.footer}>
+      <footer className={`${styles.footer} p-1`}>
+        <section className='d-flex w-100 p-5 justify-content-evenly'>
+          <div>
+            <h6 className={`${styles.listTitle} fs-5 text-info`}>Navigation</h6>
+            <ul className={styles.list}>
+              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Home</span></li>
+              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>About Me</span></li>
+              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Tech Stack</span></li>
+              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Projects</span></li>
+              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Contact</span></li>
+            </ul>
+          </div>
+          <div>
+            <p className={`${styles.listTitle} fs-5 text-info`}>External Accounts</p>
+            <ul className={styles.list}>
+              <li><span className={`${styles.listItem} fs-6 text-info`}>Github</span></li>
+              <li><span className={`${styles.listItem} fs-6 text-info`}>LinkedIn</span></li>
+              <li><span className={`${styles.listItem} fs-6 text-info`}>CV Resume</span></li>
+            </ul>
+          </div>
+        </section>
+        <span className={`${styles.copyright} fs-6 text-info mb-5`}>@{currentYear} Makyia Bonner. All rights reserved.</span>
       </footer>
     </>
   )
