@@ -50,4 +50,22 @@
 .footer{
   background: linear-gradient($brand-primary, black);
   height:400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list{
+  list-style:none;
+  display: flex;
+  flex-direction: column;
+}
+.listTitle{
+  font-weight: bold;
+}
+.listItem{
+  font-weight: 100;
+}
+.copyright{
+  justify-self: center;
+  align-self: center;
 }
