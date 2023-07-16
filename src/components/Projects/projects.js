@@ -55,9 +55,9 @@ export default function Projects(){
                               : `${styles.project} flex-column flex-lg-row justify-content-evenly p-4`
                         }>
                           <img className={styles.img} src={project.img} />
-                          <div className={`${styles.rsideProjectDiv} d-block text-center`}>
-                            <h3>{project.name}</h3>
-                            <p className={`${styles.p} fs-6`}>{project.desc}</p>
+                          <div className='d-block text-center'>
+                            <h3 className='m-3'>{project.name}</h3>
+                            <p className={`${styles.p}`}>{project.desc}</p>
                             <div>
                               <button className='mx-4 py-1 px-3 rounded-pill fs-6'>Source Code</button>
                               <button className='mx-4 py-1 px-3 rounded-pill fs-6'>Website</button>

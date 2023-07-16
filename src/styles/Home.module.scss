@@ -27,6 +27,7 @@
   color:$brand-secondary;
 }
 .subtitle{
+  font-size: clamp(23px,2vw,45px);
   font-family: 'Bacasime Antique', serif;
   color:$brand-secondary;
 }
@@ -42,7 +43,7 @@
   padding-bottom: 4em;
 }
 .p{
-  font-size: clamp(16px,.5em,30px);
+  font-size: clamp(14px,1.2vw,40px);
   font-family: 'Raleway', sans-serif;
   color:#986262;
   width: 70%;
