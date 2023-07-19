@@ -22,8 +22,7 @@ export default function Projects(){
         name:"Rosco's Apparel", 
         desc:(
           `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed cursus turpis. Vivamus
-           sit amet neque id eros elementum pulvinar. In tortor dolor, vehicula eget ultricies at, porttitor 
-           a nibh.`
+           .`
          ),
         github:'', 
         site:'', 
