@@ -23,9 +23,10 @@ export default function TechStack(){
         <section className={styles.techSection}>
                 <h2 className={styles.subtitle}>Tech Stack</h2>
                 <div className={`${styles.div} m-auto`}>
-                    {languages.map((language) =>{
+                    {languages.map((language, id) =>{
+                        id = language.id
                         return (
-                            <Card id={language.id} 
+                            <Card key={id} 
                                   style={{ width: 'clamp(30px, 9vw, 100px)', background:'white',
                                            padding:"3px", boxShadow:'0px 5px 13px black', 
                                            display:'flex', alignSelf:'center', justifySelf:'center' }}>

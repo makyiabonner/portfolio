@@ -47,9 +47,10 @@ export default function Projects(){
         <section className={`${styles.fourthMain} d-block p-5`}>
           <h2 className={`${styles.subtitle} text-center m-5`}>Projects</h2>
           <div className={`${styles.div} bg-info p-5 m-auto d-flex flex-column gap-5 align-items-center`}>
-            {projects.map((project) => {
+            {projects.map((project ,id) => {
+                    id = project.id
                     return (
-                        <div id={project.id} className={(project.id % 2 === 0)
+                        <div key={id} className={(project.id % 2 === 0)
                               ? `${styles.project} flex-lg-row-reverse flex-column p-4`
                               : `${styles.project} flex-column flex-lg-row justify-content-evenly p-4`
                         }>
