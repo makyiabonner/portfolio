@@ -5,13 +5,18 @@ import Head from 'next/head'
 import NewNav from '../components/NewNav/newNav';
 import styles from '../styles/Home.module.scss';
 import Link from 'next/link';
+import { useRef } from 'react';
 
 
 export default function Home() {
+  const homeRef = useRef(null)
+  const aboutRef = useRef(null)
+  const techRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null);
 
-  const handleScrollClick = () => {
-    // Scroll to the target div smoothly
-    targetDivRef.current.scrollIntoView({
+  const handleScrollClick = (ref) => {
+    ref.current.scrollIntoView({
       behavior: 'smooth'
     });
   };
@@ -24,8 +29,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NewNav/>
-      <main className={styles.landingSection}>
+      <NewNav refHome={homeRef} refAbout={aboutRef} refWorks={projectRef} refContact={contactRef}/>
+      <main ref={homeRef} className={styles.landingSection}>
         <section>
           <h1 className={styles.landingTitle}>Hello, I&apos;m Makyia Bonner</h1>
           <h3 className={styles.landingSubtitle}>Front-end Developer</h3>
@@ -53,7 +58,7 @@ export default function Home() {
           <path  d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill" fill="#012b4b" fill-opacity="1"></path>
         </svg>
       </div>
-      <section className={styles.secondMain}>
+      <section ref={aboutRef} className={styles.secondMain}>
         <div className={styles.aboutDiv}>
           <h2 className={styles.subtitle}>About Me</h2>
           <p className={`${styles.p} p-xl-5`}>
@@ -63,9 +68,15 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <TechStack/>
-      <Projects/>
-      <ContactForm/> 
+      <div ref={techRef}>
+        <TechStack/>
+      </div>
+      <div ref={projectRef}>
+        <Projects/>
+      </div>
+      <div ref={contactRef}>
+        <ContactForm/> 
+      </div>
       <div id='divider'>
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style={{display: "block", background:'ghostwhite'}}>
           <path d="M1200 0L0 103.52 0 120 1200 120 1200 0z" class="shape-fill" fill="#012b4b"></path>
@@ -76,19 +87,19 @@ export default function Home() {
           <div>
             <h6 className={`${styles.listTitle} fs-5 text-info`}>Navigation</h6>
             <ul className={styles.list}>
-              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Home</span></li>
-              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>About Me</span></li>
-              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Tech Stack</span></li>
-              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Projects</span></li>
-              <li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Contact</span></li>
+              <li className='m-1'><span className={`${styles.listItem} btn p-0 fs-6`} onClick={() => handleScrollClick(homeRef)}>Home</span></li>
+              <li className='m-1'><span className={`${styles.listItem} btn p-0 fs-6`} onClick={() => handleScrollClick(aboutRef)}>About Me</span></li>
+              <li className='m-1'><span className={`${styles.listItem} btn p-0 fs-6`} onClick={() => handleScrollClick(techRef)}>Tech Stack</span></li>
+              <li className='m-1'><span className={`${styles.listItem} btn p-0 fs-6`} onClick={() => handleScrollClick(projectRef)}>Projects</span></li>
+              <li className='m-1'><span className={`${styles.listItem} btn p-0 fs-6`} onClick={() => handleScrollClick(contactRef)}>Contact</span></li>
             </ul>
           </div>
           <div>
             <h6 className={`${styles.listTitle} fs-5 text-info`}>External Accounts</h6>
             <ul className={styles.list}>
-              <Link className={styles.listItem} target='_blank' href='https://github.com/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>Github</span></li></Link>
-              <Link className={styles.listItem} target='_blank' href='https://www.linkedin.com/in/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>LinkedIn</span></li></Link>
-              <Link className={styles.listItem} target='_blank' href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'><li className='m-1'><span className={`${styles.listItem} fs-6 text-info`}>CV Resume</span></li></Link>
+              <Link className={styles.listItem} target='_blank' href='https://github.com/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6`}>Github</span></li></Link>
+              <Link className={styles.listItem} target='_blank' href='https://www.linkedin.com/in/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6`}>LinkedIn</span></li></Link>
+              <Link className={styles.listItem} target='_blank' href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'><li className='m-1'><span className={`${styles.listItem} fs-6`}>CV Resume</span></li></Link>
             </ul>
           </div>
         </section>

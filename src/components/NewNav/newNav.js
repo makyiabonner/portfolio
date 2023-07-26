@@ -1,13 +1,20 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import styles from '../NewNav/newNav.module.scss'
+import styles from '../NewNav/newNav.module.scss';
+import { useRef } from 'react';
 
 
-export default function NewNav(){
+const NewNav = React.forwardRef((props, ref) => {
+    const homeRef = useRef(props.refHome);
+    const aboutRef = useRef(props.refAbout);
+    const projectRef = useRef(props.refWork);
+    const contactRef = useRef(props.refContact)
     const [show, setShow] = useState(false);
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     return (
         <>
             <nav className={`${styles.nav} bg-primary`}>
@@ -26,17 +33,17 @@ export default function NewNav(){
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                         <ul className={`${styles.navList} d-block text-info`}>
-                            <li className={styles.navItem}>Home</li>
-                            <li className={styles.navItem}>About</li>
-                            <li className={styles.navItem}>Works</li>
+                            <li className={styles.navItem} onClick={() => props.homeRef.current.scrollIntoView({ behavior: 'smooth' })}>Home</li>
+                            <li className={styles.navItem} onClick={() => props.homeRef.current.scrollIntoView({ behavior: 'smooth' })}>About</li>
+                            <li className={styles.navItem} onClick={() => props.homeRef.current.scrollIntoView({ behavior: 'smooth' })}>Works</li>
                         </ul>
                         </Offcanvas.Body>
                     </Offcanvas>
                 <div className={`${styles.div} d-none d-md-flex`}>
                   <ul className={styles.navList}>
-                    <li className={styles.navItem}>Home</li>
-                    <li className={styles.navItem}>About</li>
-                    <li className={styles.navItem}>Works</li>
+                            <li className={styles.navItem} onClick={() => props.homeRef.current.scrollIntoView({ behavior: 'smooth' })}>Home</li>
+                            <li className={styles.navItem} onClick={() => props.homeRef.current.scrollIntoView({ behavior: 'smooth' })}>About</li>
+                            <li className={styles.navItem} onClick={() => props.homeRef.current.scrollIntoView({ behavior: 'smooth' })}>Works</li>
                   </ul>
                   <div className={styles.contactBtn}>
                     <p className={styles.contactText}>Contact</p>
@@ -48,4 +55,5 @@ export default function NewNav(){
             </nav>
         </>
     )
-}
+})
+export default NewNav
