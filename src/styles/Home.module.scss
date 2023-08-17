@@ -26,10 +26,14 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .small_title{
-  font-size: 3em;
+  font-size: clamp(.9rem,3vw,3rem);
   letter-spacing: .4em;
 }
 .big_title{
-  font-size: 9rem;
+  font-size: clamp(2.5rem,8vw,9rem);
   letter-spacing: .1em;
+}
+.big_title::after {
+  content: '.';
+  color: red;
 }

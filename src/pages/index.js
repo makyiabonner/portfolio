@@ -16,9 +16,7 @@ export default function Home() {
       <section className={styles.home}>
         <div className={styles.hero}>
           <h3 className={styles.small_title}>FRONT-END DEVELOPER</h3>
-          <h1 className={styles.big_title}>HELLO<br></br>IM MAKYIA
-            <h1 className={styles.big_title} style={{color:'#FF0000', display:'inline'}}>.</h1>
-          </h1>
+          <h1 className={styles.big_title}>HELLO<br></br>IM MAKYIA</h1>
         </div>
         <div className={styles.nav}>
           <NewNav theme='#FF0000'/>
