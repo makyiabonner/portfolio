@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Offcanvas } from 'react-bootstrap';
 import styles from '../NewNav/newNav.module.scss';
 
 
@@ -46,15 +46,24 @@ const NewNav = React.forwardRef((props) => {
                         </li>
                     </Link>
                 </ul>
-            <div className='d-none'>
-                <ul className={styles.list}>
-                  <Link className={styles.listItem} target='_blank' href='https://github.com/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6`}>Github</span></li></Link>
-                  <Link className={styles.listItem} target='_blank' href='https://www.linkedin.com/in/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6`}>LinkedIn</span></li></Link>
-                  <Link className={styles.listItem} target='_blank' href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'><li className='m-1'><span className={`${styles.listItem} fs-6`}>CV Resume</span></li></Link>
-                </ul>
-                <span className={`${styles.copyright} fs-6 text-info mb-5`}>@2023 Makyia Bonner. All rights reserved.</span>
-            </div>
+                <div className='d-none'>
+                    <ul className={styles.list}>
+                    <Link className={styles.listItem} target='_blank' href='https://github.com/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6`}>Github</span></li></Link>
+                    <Link className={styles.listItem} target='_blank' href='https://www.linkedin.com/in/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6`}>LinkedIn</span></li></Link>
+                    <Link className={styles.listItem} target='_blank' href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'><li className='m-1'><span className={`${styles.listItem} fs-6`}>CV Resume</span></li></Link>
+                    </ul>
+                    <span className={`${styles.copyright} fs-6 text-info mb-5`}>@2023 Makyia Bonner. All rights reserved.</span>
+                </div>
             </nav>
+            <section className={styles.offcanvas} show={true} placement='end' backdrop='false'>
+                    <ul className={styles.mobile_nav_list}>
+                        <li><Link href="" className={styles.mobile_nav_list_item}>HOME</Link></li>
+                        <li><Link href="" className={styles.mobile_nav_list_item}>WORKS</Link></li>
+                        <li><Link href="" className={styles.mobile_nav_list_item}>SKILLS</Link></li>
+                        <li><Link href="" className={styles.mobile_nav_list_item}>ABOUT ME</Link></li>
+                        <li><Link href="" className={styles.mobile_nav_list_item}>CONTACT</Link></li>
+                    </ul>
+            </section>
         </>
     )
 })

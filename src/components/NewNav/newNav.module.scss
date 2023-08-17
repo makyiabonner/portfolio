@@ -1,7 +1,6 @@
 @import '../../styles/variables.scss';
 
 .nav{
-  display: none;
   background-color: transparent;
 }
 .nav_list{
@@ -21,4 +20,30 @@
 }
 .link{
   text-decoration: none;
+}
+.offcanvas{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 65vw;
+  background-color: #ffffffa1;
+  backdrop-filter: blur(4px);
+}
+.mobile_nav_list{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  list-style: none;
+}
+.mobile_nav_list_item{
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 100;
+  text-decoration: none;
+}
+@media (max-width:1023px) {
+  .nav{
+    display: none;
+  }
 }
