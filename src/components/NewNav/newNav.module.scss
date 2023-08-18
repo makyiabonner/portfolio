@@ -23,16 +23,18 @@
 }
 .offcanvas{
   position: absolute;
+  overflow: hidden;
   top: 0;
   opacity: 0;
-  right: 0;
-  width: 65vw;
+  right: -100px;
+  width: 0vw;
   height: 100%;
   background-color: #ffffffa1;
   backdrop-filter: blur(4px);
-  transition: all .2s ease-in-out;
+  transition: all .2s;
 }
 .show{
+  right: 0;
   width: 65vw;
   opacity: 1;
 }
