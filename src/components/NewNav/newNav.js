@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Offcanvas } from 'react-bootstrap';
 import styles from '../NewNav/newNav.module.scss';
 
 
 const NewNav = React.forwardRef((props) => {
-
+    const [ showNav, setShowNav ] = useState(false); 
     return (
         <>
             <nav className={styles.nav}>
@@ -46,22 +45,46 @@ const NewNav = React.forwardRef((props) => {
                         </li>
                     </Link>
                 </ul>
-                <div className='d-none'>
-                    <ul className={styles.list}>
-                    <Link className={styles.listItem} target='_blank' href='https://github.com/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6`}>Github</span></li></Link>
-                    <Link className={styles.listItem} target='_blank' href='https://www.linkedin.com/in/makyiabonner'><li className='m-1'><span className={`${styles.listItem} fs-6`}>LinkedIn</span></li></Link>
-                    <Link className={styles.listItem} target='_blank' href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'><li className='m-1'><span className={`${styles.listItem} fs-6`}>CV Resume</span></li></Link>
-                    </ul>
-                    <span className={`${styles.copyright} fs-6 text-info mb-5`}>@2023 Makyia Bonner. All rights reserved.</span>
-                </div>
             </nav>
-            <section className={styles.offcanvas} show={true} placement='end' backdrop='false'>
+            <button className={`d-lg-none ${styles.toggle_button}`} onClick={() => setShowNav( showNav => !showNav )}>
+                <svg width="35" height="39" viewBox="0 0 73 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="73" height="9" fill="white"/>
+                    <rect y="30" width="73" height="9" fill="white"/>
+                    <rect y="15" width="73" height="9" fill="white"/>
+                </svg>
+            </button>
+            <section className={` d-lg-none ${styles.offcanvas} ${showNav? `${styles.show}` : false} `}>
+                    <div className={styles.button_div}>
+                        <button className={styles.button}  onClick={() => setShowNav( showNav => !showNav )}>
+                            <svg width="35" height="47" viewBox="0 0 69 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="73.5699" height="9.20918" transform="matrix(0.859317 -0.511443 0.488643 0.872484 0 37.6269)" fill="black"/>
+                                <rect width="73.5699" height="9.20918" transform="matrix(0.859317 0.511443 -0.488643 0.872484 4.85986 0.667099)" fill="black"/>
+                            </svg>
+                        </button>
+                    </div>
                     <ul className={styles.mobile_nav_list}>
                         <li><Link href="" className={styles.mobile_nav_list_item}>HOME</Link></li>
                         <li><Link href="" className={styles.mobile_nav_list_item}>WORKS</Link></li>
                         <li><Link href="" className={styles.mobile_nav_list_item}>SKILLS</Link></li>
                         <li><Link href="" className={styles.mobile_nav_list_item}>ABOUT ME</Link></li>
                         <li><Link href="" className={styles.mobile_nav_list_item}>CONTACT</Link></li>
+                    </ul>
+                    <ul className={styles.list}>
+                        <Link className={styles.listItem} target='_blank' href='https://github.com/makyiabonner'>
+                            <li className='m-1'>
+                                <img className={styles.mobile_logo} src='./icons/github.svg'/>
+                            </li>
+                        </Link>
+                        <Link className={styles.listItem} target='_blank' href='https://www.linkedin.com/in/makyiabonner'>
+                            <li className='m-1'>
+                                <img className={styles.mobile_logo} src='./icons/linkedIn.svg'/>
+                            </li>
+                        </Link>
+                        <Link className={styles.listItem} target='_blank' href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'>
+                            <li className='m-1'>
+                                <img className={styles.mobile_logo} src='./icons/resume.svg'/>
+                            </li>
+                        </Link>
                     </ul>
             </section>
         </>
