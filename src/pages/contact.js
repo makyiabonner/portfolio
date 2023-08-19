@@ -23,7 +23,7 @@ export default function Home() {
             <h1 className={styles.page_name}>CONTACT</h1>
         </div>
         </main>
-        <NewNav mobileBg='#23292A' mobileTextColor='white'/>
+        <NewNav mobileBg='#23292A' navTextColor='white'/>
       </section>
     </>
   )

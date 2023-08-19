@@ -19,7 +19,7 @@ export default function Home() {
           <h1 className={styles.big_title}>HELLO<br></br>IM MAKYIA</h1>
         </div>
         <div className={styles.nav}>
-          <NewNav logoTheme='#FF0000' mobileBg='#ffffff' mobileTextColor='black'/>
+          <NewNav logoTheme='#FF0000' mobileBg='#ffffff' navTextColor='black'/>
         </div>
       </section>
     </>

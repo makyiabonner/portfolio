@@ -12,11 +12,15 @@ export default function NewNav(props){
     const NavItem = ({ href, text }) => (
         <Link style={{textDecoration:'none'}} href={href} passHref>
             <li>
-                <h5 className={styles.nav_list_item}>{text}</h5>
+                <h5 className={styles.nav_list_item} style={{color:props.navTextColor}}>{text}</h5>
             </li>
         </Link>
     );
-
+    /*ALL PROPS:
+        logoTheme - logo color
+        mobileBg - mobile nav bg color
+        navTextColor - nav text color
+    */
     return (
         <>
             <nav className={styles.nav}>
@@ -54,17 +58,17 @@ export default function NewNav(props){
                 <div className={styles.button_div}>
                     <button className={styles.button} onClick={toggleNav}>
                         <svg width="35" height="47" viewBox="0 0 69 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="73.5699" height="9.20918" transform="matrix(0.859317 -0.511443 0.488643 0.872484 0 37.6269)" fill={props.mobileTextColor}/>
-                            <rect width="73.5699" height="9.20918" transform="matrix(0.859317 0.511443 -0.488643 0.872484 4.85986 0.667099)" fill={props.mobileTextColor}/>
+                            <rect width="73.5699" height="9.20918" transform="matrix(0.859317 -0.511443 0.488643 0.872484 0 37.6269)" fill={props.navTextColor}/>
+                            <rect width="73.5699" height="9.20918" transform="matrix(0.859317 0.511443 -0.488643 0.872484 4.85986 0.667099)" fill={props.navTextColor}/>
                         </svg>
                     </button>
                 </div>
                 <ul className={styles.mobile_nav_list}>
-                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>HOME</Link></li>
-                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>WORKS</Link></li>
-                    <li><Link href="/skills" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>SKILLS</Link></li>
-                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>ABOUT ME</Link></li>
-                    <li><Link href="/contact" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>CONTACT</Link></li>
+                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>HOME</Link></li>
+                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>WORKS</Link></li>
+                    <li><Link href="/skills" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>SKILLS</Link></li>
+                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>ABOUT ME</Link></li>
+                    <li><Link href="/contact" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>CONTACT</Link></li>
                 </ul>
                 <ul className={styles.list}>
                     <Link className={styles.listItem} target='_blank' href='https://github.com/makyiabonner'><li className='m-1'><img className={styles.mobile_logo} style={{color:'red'}} src='./icons/github.svg' /></li></Link>

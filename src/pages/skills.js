@@ -31,7 +31,7 @@ export default function Skills(){
             <section className={styles.right_side}>
                 <h1 className={styles.page_name}>SKILLS</h1>
             </section>
-            <NewNav mobileTextColor='white' mobileBg='black'/>
+            <NewNav navTextColor='white' mobileBg='black'/>
          </main>
         </>
     )
