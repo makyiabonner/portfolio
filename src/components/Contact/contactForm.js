@@ -27,7 +27,7 @@ function ContactForm() {
 
   return (
     <section className={styles.section}>
-        <form className={`${styles.form} d-flex flex-column gap-3`} onSubmit={handleSubmit} action="https://formspree.io/f/myyqyrwy" method="POST">
+        <form className={`${styles.form} d-flex flex-column`} onSubmit={handleSubmit} action="https://formspree.io/f/myyqyrwy" method="POST">
             <div className='w-75 m-auto mb-3'>
                 <label className='mb-1' htmlFor="name">Name</label>
                 <input
@@ -60,7 +60,7 @@ function ContactForm() {
                     required
                 ></textarea>
             </div>
-            <button type="submit" className='w-25 my-3 mx-auto p-1' >Submit</button>
+            <button type="submit" className={styles.submit}>Submit</button>
         </form>
     </section>
   );

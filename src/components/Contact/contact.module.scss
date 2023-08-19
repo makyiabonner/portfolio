@@ -1,17 +1,18 @@
 @import '../../styles/variables.scss';
 
 .section{
-    display: flex;
     height: 100vh;
     background: black;
+    display: flex;
 }
 .form{
     background-color: #141414;
-    width: clamp(30em, 40vw,60em);
+    width: clamp(16em,60vw,40em);
+    margin: auto;
     height: fit-content;
-    margin-inline: auto;
-    margin-top:5em;
+    margin-top: clamp(1.5em,2vw,5em);
     padding: 2em 1rem;
+    gap: clamp(.2em,2vw,1em);
 }
 .input,.big_input,.form{
     color: white;
@@ -27,8 +28,16 @@
     outline: none;
 }
 .input{
-    height: 3em;
+    height: clamp(1em,2vw,3em);
 }
 .big_input{
-    height: 15em;
+    height: clamp(7em,20vh,15em);
+}
+.submit{
+    width: clamp(8em,2vw,13em);
+    margin: auto;
+    padding: .5em;
+    border: none;
+    color: white;
+    background-color: #23292A;
 }

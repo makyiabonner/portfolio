@@ -50,12 +50,12 @@ export default function NewNav(props){
                 </svg>
             </button>
             {/* Mobile Version Nav */}
-            <section className={`d-lg-none ${styles.offcanvas} ${showNav ? styles.show : ''}`} style={{backgroundColor : props.mobileBg}}>
+            <section className={`d-lg-none ${styles.offcanvas} ${showNav ? styles.show : ''}`} style={{backgroundColor : `${props.mobileBg}a1`}}>
                 <div className={styles.button_div}>
                     <button className={styles.button} onClick={toggleNav}>
                         <svg width="35" height="47" viewBox="0 0 69 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="73.5699" height="9.20918" transform="matrix(0.859317 -0.511443 0.488643 0.872484 0 37.6269)" fill="black"/>
-                            <rect width="73.5699" height="9.20918" transform="matrix(0.859317 0.511443 -0.488643 0.872484 4.85986 0.667099)" fill="black"/>
+                            <rect width="73.5699" height="9.20918" transform="matrix(0.859317 -0.511443 0.488643 0.872484 0 37.6269)" fill={props.mobileTextColor}/>
+                            <rect width="73.5699" height="9.20918" transform="matrix(0.859317 0.511443 -0.488643 0.872484 4.85986 0.667099)" fill={props.mobileTextColor}/>
                         </svg>
                     </button>
                 </div>

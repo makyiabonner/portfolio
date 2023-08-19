@@ -15,15 +15,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.page}>
-        <main className={styles.main}>
-            <div className={styles.left_side}>
-                <ContactForm/>
-            </div>
-            <div className={styles.right_side}>
-                <h1 className={styles.page_name}>CONTACT</h1>
-            </div>
+        <main className={`${styles.main} flex-column-reverse align-items-center flex-lg-row w-md-100`}>
+        <div className={styles.left_side}>
+            <ContactForm/>
+        </div>
+        <div className={styles.right_side}>
+            <h1 className={styles.page_name}>CONTACT</h1>
+        </div>
         </main>
-        <NewNav/>
+        <NewNav mobileBg='#23292A' mobileTextColor='white'/>
       </section>
     </>
   )
