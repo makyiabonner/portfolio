@@ -38,7 +38,7 @@ export default function NewNav(props){
                             </svg>
                         </li>
                     </Link>
-                    <NavItem href="/" text="SKILLS." />
+                    <NavItem href="/skills" text="SKILLS." />
                     <NavItem href="/" text="ABOUT ME." />
                 </ul>
             </nav>
@@ -50,7 +50,7 @@ export default function NewNav(props){
                 </svg>
             </button>
             {/* Mobile Version Nav */}
-            <section className={`d-lg-none ${styles.offcanvas} ${showNav ? styles.show : ''}`} style={{backgroundColor : `${props.mobileBg}a1`}}>
+            <section className={`d-lg-none ${styles.offcanvas} ${showNav ? styles.show : ''}`} style={{backgroundColor : props.mobileBg}}>
                 <div className={styles.button_div}>
                     <button className={styles.button} onClick={toggleNav}>
                         <svg width="35" height="47" viewBox="0 0 69 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,7 @@ export default function NewNav(props){
                 <ul className={styles.mobile_nav_list}>
                     <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>HOME</Link></li>
                     <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>WORKS</Link></li>
-                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>SKILLS</Link></li>
+                    <li><Link href="/skills" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>SKILLS</Link></li>
                     <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>ABOUT ME</Link></li>
                     <li><Link href="/contact" className={styles.mobile_nav_list_item} style={{color:props.mobileTextColor}}>CONTACT</Link></li>
                 </ul>

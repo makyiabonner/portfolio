@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
 }
 .tech_logo{
-    width: 10em;
+    width: clamp(7em,8vw,9em);
 }
 .left_side{
     display: grid;
@@ -37,11 +37,43 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
-    height: 43em;
-    width: 47em;
-    padding: 4em 0;
+    height: clamp(35em,80vh,43em);
+    width: clamp(35em,40vw,47em);
+    padding-block: 4em;
     gap: 3em;
     border-radius: 1em;
-    background-color: #ffffff42;
+    background-color: #ffffff2d;
     backdrop-filter: blur(8px);
+}
+@media (max-width:982px) {
+    .page{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .right_side{
+        overflow: hidden;
+        width: 100%;
+        height: 25vh;
+    }
+    .page_name{
+        width: fit-content;
+        left: -.7rem;
+        top: 1.6em;
+        font-size: 1.9rem;
+    }
+    .tech_logo{
+        width: 5em;
+    }
+    .left_content{
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+        padding: 2em;
+    }
+    .left_side{
+        padding: 0;
+        height: 75%;
+        width: 100vw;
+    }
 }
