@@ -1,3 +1,4 @@
+import NewNav from '@/components/NewNav/newNav';
 import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
 import styles from '../styles/Skills.module.scss';
 
@@ -14,16 +15,17 @@ export default function Skills(){
     ]
     return(
         <>
-         <container className={styles.page}>
+         <main className={styles.page}>
             <section className={styles.left_side}>
                 <div className={styles.left_content}>
-                    {skills.map((skill) => <img key={skill.id} src={skill.pic} alt={skill.alt} />)}
+                    {skills.map((skill) => <img key={skill.id} className={styles.tech_logo} src={skill.pic} alt={skill.alt} />)}
                 </div>
             </section>
             <section className={styles.right_side}>
-
+                <h1 className={styles.page_name}>SKILLS</h1>
             </section>
-         </container>
+            <NewNav />
+         </main>
         </>
     )
 }
