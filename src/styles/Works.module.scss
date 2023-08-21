@@ -1,26 +1,71 @@
 .page{
     display: flex;
     overflow: hidden;
-    background-color: #FFDDBD;
     height: 100vh;
 
 }
 .left_side{
-    width: 40vw;
+    width: 15vw;
 }
 .right_side{
     display:grid;
     place-items: center;
-    width: 60vw;
+    width: 85vw;
     position: relative;
     height: 100%;
 }
 .right_content{
+    display: grid;
+    place-items: center;
     left: 45rem;
     height: 100%;
+
 }
-.textbox,.img_container1,.img_container2,.img_container3{
+.viewProject{
+    padding: 1em 2em;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-family: 'Inter';
+    font-size: 1rem;
+}
+.content_container{
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+}
+.content1,
+.content2,
+.content3{
+    overflow: hidden;
+    position: relative;
+    width: 40em;
+    height: clamp(7em,18vh,13em);
+    background-color: grey;
+}
+.content_hover{
+    display: grid;
+    place-items: center;
     position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .3);
+    transition: top .2s ease-in;
+}
+.active{
+    top: 0%;
+}
+.content1{
+    justify-self: flex-start;
+}
+.content2{
+    align-self: center;
+    justify-self: center;
+}
+.content3{
+    justify-self: flex-end;
+    align-self:flex-end;
 }
 .page_name::before{
     content: '//';
@@ -33,51 +78,12 @@
     font-weight: 200;
     font-size: 6em;
     letter-spacing: 8px;
-    top: 2.9em;
-    left: -2.5em;
+    top: 2em;
+    left: -1.5em;
     transform: rotate(270deg);
     color: black;
 }
-.textbox{
-    background-color: rgba(0, 0, 0, 0.89);
-    padding: 2em;
-    top: 17%;
-    right: 15%;
-    width: clamp(40rem,50vw,60rem);
-    z-index: 5;
-}
-.p,.left_p{
-    color: white;
-    font-family: 'Inter';
-    line-height: 1.8em;
-    font-size: clamp(.5rem,1.5vw,1.1rem);
-}
-.img1,.img2,.img3{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-.img_container1{
-    z-index: 2;
-    top: 5%;
-    right: 35%;
-    height: clamp(19rem,55vh,44rem);
-    width: clamp(18rem,20vw,35rem);
-}
-.img_container2{
-    top: 52%;
-    right: 60%;
-    height: clamp(12rem,30vh,18rem);
-    width: clamp(15rem,15vw,30rem);
-    z-index: 1;
-}
-.img_container3{
-    top: 60%;
-    z-index: 3;
-    right: 25%;
-    height: clamp(12rem,20vh,17rem);
-    width: clamp(10rem,20vw,23rem);;
-}
+
 .left_content{
     display: none;
 }
@@ -88,13 +94,14 @@
     }
     .right_side{
         display: grid;
+    
         overflow: hidden;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 25vh;
         padding: 0;
         width: 100vw;
         height: 25vh;
-        background-color: black;
+        background-color: red;
     }
     .img_container1{
         grid-column: 3/4;

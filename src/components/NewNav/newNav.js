@@ -25,7 +25,7 @@ export default function NewNav(props){
         <>
             <nav className={styles.nav}>
                 <ul className={styles.nav_list}>
-                    <NavItem href="/" text="WORKS." />
+                    <NavItem href="/works" text="WORKS." />
                     <NavItem href="/contact" text="CONTACT." />
                     <Link href="/">
                         <li>
@@ -43,7 +43,7 @@ export default function NewNav(props){
                         </li>
                     </Link>
                     <NavItem href="/skills" text="SKILLS." />
-                    <NavItem href="/" text="ABOUT ME." />
+                    <NavItem href="/about-me" text="ABOUT ME." />
                 </ul>
             </nav>
             <button className={`d-lg-none ${styles.toggle_button}`} onClick={toggleNav}>
@@ -64,10 +64,10 @@ export default function NewNav(props){
                     </button>
                 </div>
                 <ul className={styles.mobile_nav_list}>
-                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>HOME</Link></li>
-                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>WORKS</Link></li>
+                    <li><Link href="/" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>HOME</Link></li>
+                    <li><Link href="works" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>WORKS</Link></li>
                     <li><Link href="/skills" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>SKILLS</Link></li>
-                    <li><Link href="" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>ABOUT ME</Link></li>
+                    <li><Link href="/about-me" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>ABOUT ME</Link></li>
                     <li><Link href="/contact" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>CONTACT</Link></li>
                 </ul>
                 <ul className={styles.list}>
