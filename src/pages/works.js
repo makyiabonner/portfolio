@@ -31,7 +31,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className={styles.page} style={{background:`url('')`}}>
+      <section className={styles.page} style={{background:`url('./images/gramscooking.jpg')`,boxShadow:'inset 0 -30em 20em rgba(0, 0, 0, .7)'}}>
         <div className={styles.left_side}>
             <h1 className={styles.page_name}>WORKS</h1>
            
