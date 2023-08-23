@@ -5,14 +5,14 @@ export default function ProjectViewer(props){
     const {isOpen, onClose, skillsUsed} = props
 
     const skills = [
-        {id:'react', pic:'./icons/logo-react.svg', alt:'react'},
-        {id:'html', pic:'./icons/logo-html.svg', alt:'html'},
-        {id:'css', pic:'./icons/logo-css.svg', alt:'css'},
-        {id:'sass', pic:'./icons/logo-sass.svg', alt:'sass'},
-        {id:'javascript', pic:'./icons/logo-js.svg', alt:'javascript'},
-        {id:'bootstrap', pic:'./icons/logo-bootstrap.svg', alt:'bootstrap'},
-        {id:'typescript', pic:'./icons/logo-ts.svg', alt:'typescript'},
-        {id:'nextjs', pic:'./icons/logo-nextjs.svg', alt:'nextjs'}
+        {id:'react', pic:'./icons/white-react.svg', alt:'react'},
+        {id:'html', pic:'./icons/white-html.svg', alt:'html'},
+        {id:'css', pic:'./icons/white-css.svg', alt:'css'},
+        {id:'sass', pic:'./icons/white-sass.svg', alt:'sass'},
+        {id:'javascript', pic:'./icons/white-js.svg', alt:'javascript'},
+        {id:'bootstrap', pic:'./icons/white-bootstrap.svg', alt:'bootstrap'},
+        {id:'typescript', pic:'./icons/white-ts.svg', alt:'typescript'},
+        {id:'nextjs', pic:'./icons/white-nextjs.svg', alt:'nextjs'}
     ]
     return (
         <>
