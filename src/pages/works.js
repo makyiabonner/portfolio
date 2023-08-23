@@ -3,6 +3,7 @@ import Head from 'next/head'
 import NewNav from '../components/NewNav/newNav';
 import styles from '../styles/Works.module.scss';
 import Link from 'next/link';
+import ProjectViewer from '@/components/Project/project';
 
 
 export default function Home() {
@@ -106,6 +107,7 @@ export default function Home() {
         </div>
         <NewNav mobileBg='#FFDDBD' logoTheme={hoverBg ? 'white' : 'black'} navTextColor={hoverBg ? 'white' : 'black'}/>
       </section>
+      <ProjectViewer/>
     </>
   )
 }
