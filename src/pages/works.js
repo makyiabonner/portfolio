@@ -7,21 +7,46 @@ import Link from 'next/link';
 
 export default function Home() {
   const [activeProjects, setActiveProjects] = useState([]);
+  const [hoverBg, setHoverBg] = useState(null); // Initialize hoverBg as null
 
-  const handleMouseEnter = (projectId) => {
+  const handleMouseEnter = (projectId, projectPhoto) => {
+    setHoverBg(projectPhoto); // Update hoverBg using setHoverBg
     setActiveProjects((prevActiveProjects) => [...prevActiveProjects, projectId]);
   };
 
+
   const handleMouseLeave = (projectId) => {
+    setHoverBg(false)
     setActiveProjects((prevActiveProjects) =>
       prevActiveProjects.filter((id) => id !== projectId)
     );
   };
 
   const projects = [
-    {id: '1', name: `Tesla Clone`, link:``, photo:``},
-    {id: '2', name: `Gram's Cooking`, link:``, photo:``},
-    {id: '3', name: `Savvy Booking`, link:``, photo:``}
+    {
+      id: '1', 
+      name: `Tesla Clone`, 
+      link:``, 
+      photo:`./images/teslaclone.webp`, 
+      thumbnail:`./images/teslathumbnail.webp`,
+      bgSize:'20%'
+    },
+    {
+      id: '2', 
+      name: `Gram's Cooking`, 
+      link:``, 
+      photo:`./images/gramscooking.webp`, 
+      thumbnail:`./images/gramsthumbnail.jpg`,
+      bgSize:'50%'
+    },
+    {
+      id: '3', 
+      name: `Savvy Booking`, 
+      link:``, 
+      photo:`./images/savvybooking.webp`, 
+      thumbnail:`./images/savvythumbnail.webp`,
+      bgSize:'75%'
+    }
   ]
   return (
     <>
@@ -31,9 +56,27 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className={styles.page} style={{background:`url('./images/gramscooking.jpg')`,boxShadow:'inset 0 -30em 20em rgba(0, 0, 0, .7)'}}>
+      <section 
+        className={styles.page} 
+        style={{
+          opacity:'100%',
+          backgroundImage:`url(${hoverBg})`,
+          backgroundSize:'100%',
+          backgroundRepeat:'no-repeat',
+          backgroundPosition:'center 20%',
+          boxShadow:hoverBg? 'inset 0 -30em 20em rgba(0, 0, 0, .7)' : '',
+          transition: 'all .05s'
+        }}
+      >
         <div className={styles.left_side}>
-            <h1 className={styles.page_name}>WORKS</h1>
+          <h1 
+            className={styles.page_name}
+            style={{
+              color: hoverBg ? 'white' : 'black'
+            }}
+        >
+          WORKS
+        </h1>
            
         </div>
         <div className={styles.right_side}>
@@ -43,7 +86,14 @@ export default function Home() {
                   <div 
                     key={project.id} 
                     className={`${styles[`content${project.id}`]}`} 
-                    onMouseOver={() => handleMouseEnter(project.id)}
+                    style={{
+                      background:`url(${project.thumbnail})`,
+                      backgroundSize:project.bgSize || 'cover',
+                      backgroundPosition:'center',
+                      backgroundRepeat:'no-repeat',
+                      backgroundColor:'black'
+                    }}
+                    onMouseOver={() => handleMouseEnter(project.id, project.photo)}
                     onMouseLeave={() => handleMouseLeave(project.id)}
                   >
                     <div className={`${styles.content_hover} ${activeProjects.includes(project.id) ? styles.active : ''}`}>
@@ -54,7 +104,7 @@ export default function Home() {
               })}
             </div>
         </div>
-        <NewNav mobileBg='#FFDDBD' logoTheme='black' navTextColor='black'/>
+        <NewNav mobileBg='#FFDDBD' logoTheme={hoverBg ? 'white' : 'black'} navTextColor={hoverBg ? 'white' : 'black'}/>
       </section>
     </>
   )
