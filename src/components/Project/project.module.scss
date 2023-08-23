@@ -54,12 +54,15 @@
     margin: 3em 0;
 }
 .skills_div{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
     margin: 4em;
 }
 .skill{
     color: white;
     fill: white;
-    width: 8em;
+    width: 6em;
 }
 .button{
     text-decoration: none;
