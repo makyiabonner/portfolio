@@ -7,20 +7,68 @@
     position: absolute;
     z-index: 999;
 }
+.go_back{
+    position: absolute;
+    top: 4%;
+    left: 7%;
+    background-color: transparent;
+    border: none;   
+    transition: all .3s;
+    font-weight:700;
+}
+.go_back::before{
+    content:'// ';
+    font-size: 1rem;
+}
+.go_back:hover{
+    color: red;
+}
 .left_side{
     display: flex;
-    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
     width: 30vw;
     background-color: black;
-    padding-block: 4em;
+    padding: 6em 4em;
 }
 .right_side{
     width: 70vw;
-    background-color: red;
+    background: url('../../../public/images/teslabg.webp');
+    background-size: cover;
+    background-color: black;
+    background-position:center 30%;
+    opacity:100%;
+    transition: all 5s;
 }
 .project_name,
 .project_description,
-.skills_subtitle{
+.skills_subtitle,
+.button,
+.go_back{
     color:white;
     font-family: 'Inter';
+}
+.project_description{
+    font-size: 1.1em;
+    margin: 3em 0;
+}
+.skills_div{
+    margin: 4em;
+}
+.button{
+    text-decoration: none;
+    border: 1px solid white;
+    padding: .8em 3em;
+    transition: all .3s;
+}
+.button:hover{
+    background-color: white;
+    border: black 1px solid;
+    color: black;
+}
+.button_div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }

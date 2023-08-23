@@ -7,11 +7,12 @@ import ProjectViewer from '@/components/Project/project';
 
 
 export default function Home() {
+  const [ toggleProjectViewer, setToggleProjectViewer] = useState(false)
   const [activeProjects, setActiveProjects] = useState([]);
-  const [hoverBg, setHoverBg] = useState(null); // Initialize hoverBg as null
+  const [hoverBg, setHoverBg] = useState(null); 
 
   const handleMouseEnter = (projectId, projectPhoto) => {
-    setHoverBg(projectPhoto); // Update hoverBg using setHoverBg
+    setHoverBg(projectPhoto); 
     setActiveProjects((prevActiveProjects) => [...prevActiveProjects, projectId]);
   };
 
@@ -98,7 +99,7 @@ export default function Home() {
                     onMouseLeave={() => handleMouseLeave(project.id)}
                   >
                     <div className={`${styles.content_hover} ${activeProjects.includes(project.id) ? styles.active : ''}`}>
-                        <Link href={project.link} className={styles.viewProject}>View Details</Link>
+                        <button onClick={() => setToggleProjectViewer(toggleProjectViewer => true)} className={styles.viewProject}>View Details</button>
                     </div>
                   </div>
                 )
@@ -107,7 +108,11 @@ export default function Home() {
         </div>
         <NewNav mobileBg='#FFDDBD' logoTheme={hoverBg ? 'white' : 'black'} navTextColor={hoverBg ? 'white' : 'black'}/>
       </section>
-      <ProjectViewer/>
+      <ProjectViewer
+        isOpen={toggleProjectViewer}
+        onClose={() => setToggleProjectViewer(toggleProjectViewer => false)}
+        name='Tesla Clone'
+        description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quis, deleniti nihil omnis harum ratione cumque animi ducimus vero repellat ex itaque nostrum odit officiis exercitationem facilis quas accusamus quo.' />
     </>
   )
 }
