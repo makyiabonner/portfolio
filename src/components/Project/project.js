@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 export default function ProjectViewer(props){
     const {isOpen, onClose, skillsUsed} = props
+
     const skills = [
         {id:'react', pic:'./icons/logo-react.svg', alt:'react'},
         {id:'html', pic:'./icons/logo-html.svg', alt:'html'},
@@ -33,7 +34,20 @@ export default function ProjectViewer(props){
                     <div className={styles.skills_div}>
                         <h3 className={styles.skills_subtitle}>SKILLS USED</h3>
                         <div className="d-flex gap-3">
-                            <img className={styles.skill} />
+                        {skillsUsed.map((skillId) => {
+                          const tech = skills.find((tech) => tech.id === skillId);
+                          if (tech) {
+                            return (
+                              <img
+                                key={tech.id}
+                                className={styles.skill}
+                                src={tech.pic}
+                                alt={tech.alt}
+                              />
+                            );
+                          }
+                          else return null;
+                        })}
                         </div>
                     </div>
                     <div className={styles.button_div}>

@@ -10,6 +10,12 @@ export default function Home() {
   const [ toggleProjectViewer, setToggleProjectViewer] = useState(false)
   const [activeProjects, setActiveProjects] = useState([]);
   const [hoverBg, setHoverBg] = useState(null); 
+  const [ projectDetails , setProjectDetails ] = useState({})
+
+  const viewDetails = (project) => {
+    setProjectDetails(project)
+    setToggleProjectViewer(toggleProjectViewer => true)
+  }
 
   const handleMouseEnter = (projectId, projectPhoto) => {
     setHoverBg(projectPhoto); 
@@ -31,7 +37,8 @@ export default function Home() {
       link:``, 
       photo:`./images/teslaclone.webp`, 
       thumbnail:`./images/teslathumbnail.webp`,
-      bgSize:'20%'
+      bgSize:'20%',
+      skills: ['react', 'bootstrap', 'sass']
     },
     {
       id: '2', 
@@ -99,7 +106,7 @@ export default function Home() {
                     onMouseLeave={() => handleMouseLeave(project.id)}
                   >
                     <div className={`${styles.content_hover} ${activeProjects.includes(project.id) ? styles.active : ''}`}>
-                        <button onClick={() => setToggleProjectViewer(toggleProjectViewer => true)} className={styles.viewProject}>View Details</button>
+                        <button onClick={() => viewDetails(project)} className={styles.viewProject}>View Details</button>
                     </div>
                   </div>
                 )
@@ -111,7 +118,8 @@ export default function Home() {
       <ProjectViewer
         isOpen={toggleProjectViewer}
         onClose={() => setToggleProjectViewer(toggleProjectViewer => false)}
-        name='Tesla Clone'
+        skillsUsed={projectDetails.skills || []}
+        name={projectDetails.name || ''}
         description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quis, deleniti nihil omnis harum ratione cumque animi ducimus vero repellat ex itaque nostrum odit officiis exercitationem facilis quas accusamus quo.' />
     </>
   )
