@@ -34,12 +34,6 @@
 }
 .right_side{
     width: 70vw;
-    background: url('../../../public/images/teslabg.webp');
-    background-size: cover;
-    background-color: black;
-    background-position:center 30%;
-    opacity:100%;
-    transition: all 5s;
 }
 .project_name,
 .project_description,
@@ -53,16 +47,36 @@
     font-size: 1.1em;
     margin: 3em 0;
 }
-.skills_div{
+.skills_container{
     flex-direction: column;
+    width: 100%;
     align-items: center;
     display: flex;
-    margin: 4em;
+    margin: 4em 0;
 }
+.skills_div{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    opacity: 100%;
+    margin-top: 2em;
+    align-items: center;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      margin-top: 3em;
+    }
+    to {
+        opacity: 1;
+        margin-top:2em;
+    }
+  }
 .skill{
+    height: fit-content;
     color: white;
     fill: white;
-    width: 6em;
+    width: 7em;
 }
 .button{
     text-decoration: none;

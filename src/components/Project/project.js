@@ -2,7 +2,7 @@ import styles from './project.module.scss';
 import Link from 'next/link';
 
 export default function ProjectViewer(props){
-    const {isOpen, onClose, skillsUsed} = props
+    const {isOpen, onClose, skillsUsed, bgPic} = props
 
     const skills = [
         {id:'react', pic:'./icons/white-react.svg', alt:'react'},
@@ -31,9 +31,9 @@ export default function ProjectViewer(props){
                     <p className={styles.project_description}>
                         {props.description}
                     </p>
-                    <div className={styles.skills_div}>
+                    <div className={styles.skills_container}>
                         <h3 className={styles.skills_subtitle}>SKILLS USED</h3>
-                        <div className="d-flex gap-3">
+                        <div className={styles.skills_div}>
                         {skillsUsed.map((skillId) => {
                           const tech = skills.find((tech) => tech.id === skillId);
                           if (tech) {
@@ -55,7 +55,14 @@ export default function ProjectViewer(props){
                         <Link href='/' className={styles.button}>View Code</Link>
                     </div>
                 </div>
-                <div className={styles.right_side}></div>
+                <div 
+                    style={{
+                        background: `url(${props.bgPic})`,
+                        backgroundSize:'cover',
+                        backgroundRepeat:'no-repeat',
+                        backgroundPosition:'center 30%'
+                    }}
+                    className={styles.right_side}></div>
             </section>
         </>
     )

@@ -38,15 +38,18 @@ export default function Home() {
       photo:`./images/teslaclone.webp`, 
       thumbnail:`./images/teslathumbnail.webp`,
       bgSize:'20%',
-      skills: ['react', 'bootstrap', 'sass']
+      projectViewPic:'./images/teslabg.webp',
+      skills: ['typescript', 'nextjs', 'sass']
     },
     {
       id: '2', 
       name: `Gram's Cooking`, 
       link:``, 
       photo:`./images/gramscooking.webp`, 
-      thumbnail:`./images/gramsthumbnail.jpg`,
-      bgSize:'50%'
+      thumbnail:`./images/gramsthumbnail.webp`,
+      bgSize:'50%',
+      projectViewPic:'./images/gramsbg.webp',
+      skills: ['javascript', 'react', 'css']
     },
     {
       id: '3', 
@@ -54,7 +57,9 @@ export default function Home() {
       link:``, 
       photo:`./images/savvybooking.webp`, 
       thumbnail:`./images/savvythumbnail.webp`,
-      bgSize:'75%'
+      bgSize:'75%',
+      projectViewPic:'',
+      skills: ['nextjs', 'bootstrap', 'sass']
     }
   ]
   return (
@@ -120,6 +125,7 @@ export default function Home() {
         onClose={() => setToggleProjectViewer(toggleProjectViewer => false)}
         skillsUsed={projectDetails.skills || []}
         name={projectDetails.name || ''}
+        bgPic={projectDetails.projectViewPic}
         description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quis, deleniti nihil omnis harum ratione cumque animi ducimus vero repellat ex itaque nostrum odit officiis exercitationem facilis quas accusamus quo.' />
     </>
   )
