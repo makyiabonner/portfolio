@@ -34,7 +34,9 @@ export default function Home() {
     {
       id: '1', 
       name: `Tesla Clone`, 
-      link:``, 
+      siteLink:`https://makyiabonner-tesla-clone.vercel.app/`,
+      codeLink:`https://github.com/makyiabonner/tesla-clone`,
+      description:` In this project, I used Next.js for server-side rendering, ensuring optimal performance and SEO. TypeScript enhanced code quality, while Sass streamlined styling with modularity. This site is fully responsive.`, 
       photo:`./images/teslaclone.webp`, 
       thumbnail:`./images/teslathumbnail.webp`,
       bgSize:'20%',
@@ -44,7 +46,9 @@ export default function Home() {
     {
       id: '2', 
       name: `Gram's Cooking`, 
-      link:``, 
+      siteLink:`https://gramscooking.netlify.app/`,
+      codeLink:`https://github.com/makyiabonner/gramscooking`,
+      description:`This project is a frontend cooking site skillfully engineered using React, JavaScript, and CSS. Leveraging JavaScript's dynamism and CSS's styling capabilities. This site is fully responsive.`, 
       photo:`./images/gramscooking.webp`, 
       thumbnail:`./images/gramsthumbnail.webp`,
       bgSize:'50%',
@@ -54,11 +58,13 @@ export default function Home() {
     {
       id: '3', 
       name: `Savvy Booking`, 
-      link:``, 
+      siteLink:``,
+      codeLink:`https://github.com/makyiabonner/booking`,
+      description:``, 
       photo:`./images/savvybooking.webp`, 
       thumbnail:`./images/savvythumbnail.webp`,
       bgSize:'75%',
-      projectViewPic:'',
+      projectViewPic:'./images/savvybg.webp',
       skills: ['nextjs', 'bootstrap', 'sass']
     }
   ]
@@ -125,8 +131,10 @@ export default function Home() {
         onClose={() => setToggleProjectViewer(toggleProjectViewer => false)}
         skillsUsed={projectDetails.skills || []}
         name={projectDetails.name || ''}
+        site={projectDetails.siteLink || '/works'}
+        code={projectDetails.codeLink || '/works'}
         bgPic={projectDetails.projectViewPic}
-        description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quis, deleniti nihil omnis harum ratione cumque animi ducimus vero repellat ex itaque nostrum odit officiis exercitationem facilis quas accusamus quo.' />
+        description={projectDetails.description || 'lorem'} />
     </>
   )
 }

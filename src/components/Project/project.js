@@ -2,7 +2,7 @@ import styles from './project.module.scss';
 import Link from 'next/link';
 
 export default function ProjectViewer(props){
-    const {isOpen, onClose, skillsUsed, bgPic} = props
+    const {isOpen, onClose, skillsUsed, bgPic, site, code} = props
 
     const skills = [
         {id:'react', pic:'./icons/white-react.svg', alt:'react'},
@@ -51,8 +51,8 @@ export default function ProjectViewer(props){
                         </div>
                     </div>
                     <div className={styles.button_div}>
-                        <Link href='/' className={styles.button}>View Site</Link>
-                        <Link href='/' className={styles.button}>View Code</Link>
+                        <Link target='_blank' href={props.site} className={styles.button}>View Site</Link>
+                        <Link target='_blank' href={props.code} className={styles.button}>View Code</Link>
                     </div>
                 </div>
                 <div 
