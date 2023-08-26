@@ -60,7 +60,7 @@ export default function Home() {
       name: `Savvy Booking`, 
       siteLink:``,
       codeLink:`https://github.com/makyiabonner/booking`,
-      description:``, 
+      description:`This project was developed using Next.js, Bootstrap, Sass, and Booking.com API. Seamlessly fusing the power of Next.js for optimal rendering, Bootstrap for streamlined design components, and Sass for modular styling, I've crafted a versatile platform. This site is both responsive and adaptive.`, 
       photo:`./images/savvybooking.webp`, 
       thumbnail:`./images/savvythumbnail.webp`,
       bgSize:'75%',
@@ -83,12 +83,21 @@ export default function Home() {
           backgroundImage:`url(${hoverBg})`,
           backgroundSize:'100%',
           backgroundRepeat:'no-repeat',
-          backgroundPosition:'center 20%',
           boxShadow:hoverBg? 'inset 0 -30em 20em rgba(0, 0, 0, .7)' : '',
-          transition: 'all .05s'
+          transition: 'all .05s ease-in-out .1s'
         }}
       >
-        <div className={styles.left_side}>
+        <div className={styles.left_side}
+          style={{
+            '@media (max-width:982px)': {
+              background: `url(${hoverBg || 'black'})`,
+              backgroundSize:'contain',
+              backgroundRepeat:'no-repeat',
+              backgroundPosition:'center 20%',
+              boxShadow:hoverBg? 'inset 0 -30em 20em rgba(0, 0, 0, .7)' : '',
+            }
+          }}
+        >
           <h1 
             className={styles.page_name}
             style={{
