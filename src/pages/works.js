@@ -89,7 +89,7 @@ export default function Home() {
       >
         <div className={styles.left_side}
           style={{
-            '@media (max-width:982px)': {
+            '@media (maxWidth:982px)': {
               background: `url(${hoverBg || 'black'})`,
               backgroundSize:'contain',
               backgroundRepeat:'no-repeat',
@@ -117,7 +117,7 @@ export default function Home() {
                     className={`${styles[`content${project.id}`]}`} 
                     style={{
                       background:`url(${project.thumbnail})`,
-                      backgroundSize:project.bgSize || 'cover',
+                      backgroundSize: project.bgSize || 'cover',
                       backgroundPosition:'center',
                       backgroundRepeat:'no-repeat',
                       backgroundColor:'black'
@@ -133,7 +133,7 @@ export default function Home() {
               })}
             </div>
         </div>
-        <NewNav mobileBg='#FFDDBD' logoTheme={hoverBg ? 'white' : 'black'} navTextColor={hoverBg ? 'white' : 'black'}/>
+        <NewNav mobileBg={hoverBg? 'black' : 'white'} logoTheme={hoverBg ? 'white' : 'black'} navTextColor={hoverBg ? 'white' : 'black'}/>
       </section>
       <ProjectViewer
         isOpen={toggleProjectViewer}
