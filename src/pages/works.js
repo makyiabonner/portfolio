@@ -8,6 +8,7 @@ import ProjectViewer from '@/components/Project/project';
 
 export default function Home() {
   const [ toggleProjectViewer, setToggleProjectViewer] = useState(false)
+  const [ highlightDiv, setHighlightDiv ] = useState(null)
   const [activeProjects, setActiveProjects] = useState([]);
   const [hoverBg, setHoverBg] = useState(null); 
   const [ projectDetails , setProjectDetails ] = useState({})
@@ -32,7 +33,8 @@ export default function Home() {
 
   const projects = [
     {
-      id: '1', 
+      id: '1',
+      shortName:'tesla', 
       name: `Tesla Clone`, 
       siteLink:`https://makyiabonner-tesla-clone.vercel.app/`,
       codeLink:`https://github.com/makyiabonner/tesla-clone`,
@@ -44,7 +46,8 @@ export default function Home() {
       skills: ['typescript', 'nextjs', 'sass']
     },
     {
-      id: '2', 
+      id: '2',
+      shortName:'grams', 
       name: `Gram's Cooking`, 
       siteLink:`https://gramscooking.netlify.app/`,
       codeLink:`https://github.com/makyiabonner/gramscooking`,
@@ -56,7 +59,8 @@ export default function Home() {
       skills: ['javascript', 'react', 'css']
     },
     {
-      id: '3', 
+      id: '3',
+      shortName:'savvy', 
       name: `Savvy Booking`, 
       siteLink:``,
       codeLink:`https://github.com/makyiabonner/booking`,
@@ -87,17 +91,7 @@ export default function Home() {
           transition: 'all .05s ease-in-out .1s'
         }}
       >
-        <div className={styles.left_side}
-          style={{
-            '@media (maxWidth:982px)': {
-              background: `url(${hoverBg})`,
-              backgroundSize:'contain',
-              backgroundRepeat:'no-repeat',
-              backgroundPosition:'center 20%',
-              boxShadow:hoverBg? 'inset 0 -30em 20em rgba(0, 0, 0, .7)' : '',
-            }
-          }}
-        >
+      <div className={`${styles.left_side} ${styles[`left_${highlightDiv}_bg`]} ${hoverBg ? styles.withBoxShadow : ''}`}>
           <h1 
             className={styles.page_name}
             style={{
@@ -122,13 +116,14 @@ export default function Home() {
                       backgroundRepeat:'no-repeat',
                       backgroundColor:'black'
                     }}
-                    onMouseOver={() => handleMouseEnter(project.id, project.photo)}
-                    onMouseLeave={() => handleMouseLeave(project.id)}
+                    onMouseOver={() =>{handleMouseEnter(project.id, project.photo); setHighlightDiv(project.shortName);}}
+                    onMouseLeave={() =>{handleMouseLeave(project.id); setHighlightDiv(null);}}
                   >
                     <div className={`${styles.content_hover} ${activeProjects.includes(project.id) ? styles.active : ''}`}>
                         <button onClick={() => viewDetails(project)} className={styles.viewProject}>View Details</button>
                     </div>
                   </div>
+                  
                 )
               })}
             </div>
