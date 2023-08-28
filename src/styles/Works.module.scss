@@ -2,6 +2,14 @@
     display: flex;
     overflow: hidden;
     height: 100vh;
+    opacity:'100%';
+    background-size:'100%';
+    background-repeat:'no-repeat';
+    transition: 'all .05s ease-in-out .1s'
+}
+.withBoxShadow{
+    box-shadow:'inset 0 -30em 20em rgba(0, 0, 0, .7)';
+
 }
 .left_side{
     width: 15vw;

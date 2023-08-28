@@ -77,20 +77,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section 
-        className={styles.page} 
+        className={`${styles.page} ${hoverBg? styles.withBoxShadow : ''}`}
         style={{
           opacity:'100%',
           backgroundImage:`url(${hoverBg})`,
           backgroundSize:'100%',
+          backgroundPosition:'center 20%',
           backgroundRepeat:'no-repeat',
-          boxShadow:hoverBg? 'inset 0 -30em 20em rgba(0, 0, 0, .7)' : '',
           transition: 'all .05s ease-in-out .1s'
         }}
       >
         <div className={styles.left_side}
           style={{
             '@media (maxWidth:982px)': {
-              background: `url(${hoverBg || 'black'})`,
+              background: `url(${hoverBg})`,
               backgroundSize:'contain',
               backgroundRepeat:'no-repeat',
               backgroundPosition:'center 20%',
