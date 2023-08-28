@@ -41,7 +41,7 @@ export default function Home() {
       description:` In this project, I used Next.js for server-side rendering, ensuring optimal performance and SEO. TypeScript enhanced code quality, while Sass streamlined styling with modularity. This site is fully responsive.`, 
       photo:`./images/teslaclone.webp`, 
       thumbnail:`./images/teslathumbnail.webp`,
-      bgSize:'20%',
+      bgSize:'clamp(6px,30vw, 7em)',
       projectViewPic:'./images/teslabg.webp',
       skills: ['typescript', 'nextjs', 'sass']
     },
@@ -54,7 +54,7 @@ export default function Home() {
       description:`This project is a frontend cooking site skillfully engineered using React, JavaScript, and CSS. Leveraging JavaScript's dynamism and CSS's styling capabilities. This site is fully responsive.`, 
       photo:`./images/gramscooking.webp`, 
       thumbnail:`./images/gramsthumbnail.webp`,
-      bgSize:'50%',
+      bgSize:'clamp(6px,60vw, 18em)',
       projectViewPic:'./images/gramsbg.webp',
       skills: ['javascript', 'react', 'css']
     },
@@ -67,7 +67,7 @@ export default function Home() {
       description:`This project was developed using Next.js, Bootstrap, Sass, and Booking.com API. Seamlessly fusing the power of Next.js for optimal rendering, Bootstrap for streamlined design components, and Sass for modular styling, I've crafted a versatile platform. This site is both responsive and adaptive.`, 
       photo:`./images/savvybooking.webp`, 
       thumbnail:`./images/savvythumbnail.webp`,
-      bgSize:'75%',
+      bgSize:'clamp(6px,60vw, 18em)',
       projectViewPic:'./images/savvybg.webp',
       skills: ['nextjs', 'bootstrap', 'sass']
     }
