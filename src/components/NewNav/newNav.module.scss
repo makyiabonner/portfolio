@@ -27,14 +27,22 @@
   text-decoration: none;
 }
 .offcanvas::before{
+  z-index: 0;
   content: '';
   position: absolute;
   height: 100%;
   width: 100%;
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.mobile_nav_list,
+.button,
+.list{
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
 }
 .offcanvas{
+  z-index: 0;
   position: absolute;
   overflow: hidden;
   top: 0;
