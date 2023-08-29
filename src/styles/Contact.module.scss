@@ -10,7 +10,7 @@
 }
 .right_side{
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 40vw;
     background: url('../../public/images/contact-bg.svg');
     background-size: cover;    
@@ -28,7 +28,7 @@
 @media (max-width:982px) {
     .right_side{
         width: 100%;
-        height: 25vh;
+        height: 25%;
     }
     .page_name{
         width: fit-content;
@@ -37,7 +37,7 @@
         font-size: 1.9rem;
     }
     .left_side{
-        height: 75vh;
+        height: 75%;
         width: 100%;
     }
 }

@@ -84,6 +84,7 @@
 @media (max-width:982px) {
     .page{
         display: flex;
+        overflow: hidden;
         flex-direction: column-reverse;
     }
     .right_side{
@@ -93,7 +94,7 @@
         grid-template-rows: 25vh;
         padding: 0;
         width: 100vw;
-        height: 25vh;
+        height: 25%;
         background-color: black;
     }
     .img_container1{
@@ -129,7 +130,7 @@
         font-size: 1.4rem;
     }
     .left_side{
-        height: 75vh;
+        height: 75%;
         width: 100%;
         background-color: black;
     }

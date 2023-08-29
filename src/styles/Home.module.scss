@@ -1,9 +1,10 @@
 .home{
   display: flex;
   padding-bottom:1em;
+  overflow: hidden;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-image: url('../../public/images/home-bg.svg');
   background-size: cover;

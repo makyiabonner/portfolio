@@ -105,13 +105,13 @@
     }
     .right_side{
         width: 100%;
-        height: 25vh;
+        height: 25%;
     }
     .page_name::before{
         font-size: 1.4rem;
     }
     .left_side{
-        height: 75vh;
+        height: 75%;
         padding: 2em;
         padding-top:3.5em;
         padding-inline:clamp(1em,13vw,7em);

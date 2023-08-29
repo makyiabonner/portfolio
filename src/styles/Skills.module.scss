@@ -2,7 +2,7 @@
     display: flex;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: url('../../public/images/skills-bg.svg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,13 +13,13 @@
 .left_side{
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: 100%;
     width: 60vw;
     padding-bottom: 2em;
 }
 .right_side{
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 40vw;
     background-size: cover;    
 }
@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
-    height: clamp(35em,80vh,43em);
+    height: clamp(35em,80%,43em);
     width: clamp(35em,40vw,47em);
     padding-block: 4em;
     gap: 3em;
