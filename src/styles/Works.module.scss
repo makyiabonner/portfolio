@@ -1,7 +1,7 @@
 .page{
     display: flex;
     overflow: hidden;
-    height: 100%;
+    height: 100vh;
     opacity:'100%';
     background-size:'100%';
     background-repeat:'no-repeat';
@@ -56,7 +56,7 @@
     overflow: hidden;
     position: relative;
     width: 40em;
-    height: clamp(7em,18%,13em);
+    height: clamp(7em,18vh,13em);
     background-color: grey;
 }
 .content_hover{
@@ -119,7 +119,7 @@
     .content_container{
         display: grid;
         place-items: center;
-        gap:.1em;
+        gap:.7em;
     }
     .right_side{
         display: flex;
@@ -127,7 +127,8 @@
         justify-content: center;
         overflow: hidden;
         width: 100vw;
-        height: 75%;
+        height: 75vh;
+        height: 75svh;
         background-color: white;
     }
     .page_name{
@@ -144,7 +145,8 @@
         font-size: 1.4rem;
     }
     .left_side{
-        height: 25%;
+        height: 25vh;
+        height: 25svh;
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
