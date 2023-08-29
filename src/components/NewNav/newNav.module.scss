@@ -35,6 +35,7 @@
   width: 0vw;
   height: 100%;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   transition: all .2s;
 }
 .show{
