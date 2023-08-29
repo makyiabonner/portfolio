@@ -23,6 +23,7 @@
     width: 15vw;
 }
 .right_side{
+    box-sizing: border-box;
     display:grid;
     place-items: center;
     width: 85vw;
@@ -105,6 +106,8 @@
     .page{
         display: flex;
         flex-direction: column;
+        height: 100vh;
+        height: 100svh;
         padding: 0;
     }
     .left_grams_bg{
@@ -126,7 +129,7 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        width: 100vw;
+        width: 100%;
         height: 75vh;
         height: 75svh;
         background-color: white;

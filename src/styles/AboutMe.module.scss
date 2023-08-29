@@ -84,6 +84,8 @@
 @media (max-width:982px) {
     .page{
         display: flex;
+        height: 100vh;
+        height: 100svh;
         overflow: hidden;
         flex-direction: column-reverse;
     }
