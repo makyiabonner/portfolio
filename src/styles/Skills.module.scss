@@ -48,6 +48,8 @@
 @media (max-width:982px) {
     .page{
         display: flex;
+        height: 100vh;
+        height: 100svh;
         flex-direction: column-reverse;
     }
     .right_side{
@@ -68,7 +70,8 @@
     .left_content{
         grid-template-columns: repeat(2, 1fr);
         border-radius: 0;
-        height: 100%;
+        height: 75vh;
+        height: 75svh;
         width: 100%;
         padding: 2em;
     }
