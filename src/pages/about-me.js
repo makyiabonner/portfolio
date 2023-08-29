@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import NewNav from '../components/NewNav/newNav';
 import styles from '../styles/AboutMe.module.scss';
-import Link from 'next/link';
-import ContactForm from '@/components/Contact/contactForm';
 
 
 export default function Home() {
@@ -21,16 +19,16 @@ export default function Home() {
                 <p className={styles.left_p}>
                     As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
                     My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
-                    or indulging in my love for anime. I'm currently watching on the <i>"Hell's Paradise"</i> – definitely a good watch. 
+                    or indulging in my love for anime. I&apos;m currently watching on the <i>&quot;Hell&apos;s Paradise&quot;</i> – definitely a good watch. 
                 </p>
             </div>
         </div>
         <div className={styles.right_side}>
                 <div className={styles.textbox}>
                     <p className={styles.p}>
-                        As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
-                        My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
-                        or indulging in my love for anime. I'm currently watching on the <i>"Hell's Paradise"</i> – definitely a good watch. 
+                      As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
+                      My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
+                      or indulging in my love for anime. I&apos;m currently watching on the <i>&quot;Hell&apos;s Paradise&quot;</i> – definitely a good watch. 
                     </p>
                 </div>
                 <div className={styles.img_container1}>
