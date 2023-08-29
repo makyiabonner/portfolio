@@ -26,6 +26,14 @@
 .link{
   text-decoration: none;
 }
+.offcanvas::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
 .offcanvas{
   position: absolute;
   overflow: hidden;
@@ -34,8 +42,6 @@
   right: -100px;
   width: 0vw;
   height: 100%;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   transition: all .2s;
 }
 .show{
