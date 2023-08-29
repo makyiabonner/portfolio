@@ -31,7 +31,7 @@
     align-items: center;
     width: 30vw;
     background-color: black;
-    padding: 6em 4em;
+    padding: 6em clamp(2em,2vw,4em);
 }
 .right_side{
     width: 70vw;
@@ -46,15 +46,15 @@
     font-family: 'Inter';
 }
 .project_description{
-    font-size: 1.1em;
-    margin: 3em 0;
+    font-size: clamp(.9em,2vw,1em);
+    margin: clamp(1em, 1vh, 3em) 0;
 }
 .skills_container{
     flex-direction: column;
     width: 100%;
     align-items: center;
     display: flex;
-    margin: 4em 0;
+    margin: clamp(1em, 3vh ,3em) 0;
 }
 .skills_div{
     display: flex;
@@ -78,12 +78,13 @@
     height: fit-content;
     color: white;
     fill: white;
-    width: 7em;
+    width: clamp(3.5em,6vw,7em);
 }
 .button{
     text-decoration: none;
     border: 1px solid white;
-    padding: .8em 3em;
+    font-size: clamp(.6em, 1vw, 1em);
+    padding: .8em clamp(.4em,20vw ,3em);
     transition: all .3s;
 }
 .button:hover{
@@ -94,6 +95,7 @@
 .button_div{
     display: flex;
     justify-content: space-between;
+    padding-block: 2em;
     width: 100%;
 }
 @media (max-width:982px) {
@@ -112,6 +114,7 @@
         height: 75vh;
         padding: 2em;
         padding-top:3.5em;
+        padding-inline:clamp(1em,13vw,7em);
         width: 100%;
         background-color: black;
         justify-content: space-evenly;
@@ -124,10 +127,16 @@
     }
     .button_div{
         display: flex;
+        width: 100%;
+        align-items: center;
+        height: fit-content;
         flex-direction: column;
         gap: .5em;
     }
     .button{
+        justify-self: center;
         text-align: center;
+        max-width: 200px;
+        width: 100%;
     }
 }
