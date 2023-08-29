@@ -1,5 +1,6 @@
 import styles from './project.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProjectViewer(props) {
     const { isOpen, onClose, skillsUsed, bgPic, site, code, name, description } = props;
@@ -38,7 +39,7 @@ export default function ProjectViewer(props) {
                         {skillsUsed.map((skillId) => {
                             const tech = skills.find((tech) => tech.id === skillId);
                             return tech ? (
-                                <img
+                                <Image
                                     key={tech.id}
                                     className={styles.skill}
                                     src={tech.pic}

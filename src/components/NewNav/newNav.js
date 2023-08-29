@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../NewNav/newNav.module.scss';
 
 export default function NewNav(props){
@@ -71,9 +72,9 @@ export default function NewNav(props){
                     <li><Link href="/contact" className={styles.mobile_nav_list_item} style={{color:props.navTextColor}}>CONTACT</Link></li>
                 </ul>
                 <ul className={styles.list}>
-                    <Link className={styles.listItem} target='_blank' href='https://github.com/makyiabonner'><li className='m-1'><img className={styles.mobile_logo} style={{color:'red'}} src='./icons/github.svg' /></li></Link>
-                    <Link className={styles.listItem} target='_blank' href='https://www.linkedin.com/in/makyiabonner'><li className='m-1'><img className={styles.mobile_logo} style={{fill:'red'}} src='./icons/linkedIn.svg' /></li></Link>
-                    <Link className={styles.listItem} target='_blank' href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'><li className='m-1'><img className={styles.mobile_logo} style={{color:'red'}} src='./icons/resume.svg' /></li></Link>
+                    <Link className={styles.listItem} target='_blank' href='https://github.com/makyiabonner'><li className='m-1'><Image className={styles.mobile_logo} style={{color:'red'}} alt='github link' src='./icons/github.svg' /></li></Link>
+                    <Link className={styles.listItem} target='_blank' href='https://www.linkedin.com/in/makyiabonner'><li className='m-1'><Image className={styles.mobile_logo} style={{fill:'red'}} alt='linkedin link' src='./icons/linkedIn.svg' /></li></Link>
+                    <Link className={styles.listItem} target='_blank' href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'><li className='m-1'><Image className={styles.mobile_logo} style={{color:'red'}} alt='resume link' src='./icons/resume.svg' /></li></Link>
                 </ul>
             </section>
         </>
