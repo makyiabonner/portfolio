@@ -123,7 +123,6 @@ export default function Home() {
                         <button onClick={() => viewDetails(project)} className={styles.viewProject}>View Details</button>
                     </div>
                   </div>
-                  
                 )
               })}
             </div>
