@@ -34,11 +34,6 @@
     opacity: 1;
   }
 }
-.small_title{
-  font-size: clamp(.9rem,6vw,3rem);
-  font-weight: 200;
-  letter-spacing: .4em;
-}
 .scrollIntoView_div{
   display: flex;
   flex-direction: column;
@@ -78,8 +73,13 @@
     transform: translateY(0);
   }
 }
+.small_title{
+  font-size: clamp(.6rem,3vw,3rem);
+  font-weight: 200;
+  letter-spacing: .4em;
+}
 .big_title{
-  font-size: clamp(1rem,6vw,6rem);
+  font-size: clamp(.8rem,5vw,6rem);
   letter-spacing: .3em;
   font-weight: 800;
 }
