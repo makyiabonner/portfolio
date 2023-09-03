@@ -15,13 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.page}>
+      <video  className={styles.video} autoPlay muted loop>
+         <source src="./videos/contact.mp4" type="video/mp4" />
+      </video>
         <main className={`${styles.main} flex-column-reverse align-items-center flex-lg-row w-md-100`}>
-        <div className={styles.left_side}>
             <ContactForm/>
-        </div>
-        <div className={styles.right_side}>
-            <h1 className={styles.page_name}>CONTACT</h1>
-        </div>
         </main>
         <NewNav mobileBg='#23292Aa1' navTextColor='white'/>
       </section>
