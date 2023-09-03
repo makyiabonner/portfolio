@@ -16,62 +16,16 @@ export default function Home() {
       </Head>
       <section className={styles.home}>
         <div className={styles.hero}>
-          <h3 className={styles.small_title}>FRONT-END DEVELOPER</h3>
-          <h1 className={styles.big_title}>HELLO<br></br>IM MAKYIA</h1>
+          <h3 className={styles.small_title}>SOFTWARE ENGINEER</h3>
+          <h1 className={styles.big_title}>MAKYIA BONNER</h1>
         </div>
-        <div className={styles.nav}>
-          <ul className={styles.list}>
-              <li className={`${styles.nav_item} ${styles.active}`}><h1 className={styles.item}>HOME</h1></li>
-              <li className={`${styles.nav_item} ${styles.inactive}`}><h1 className={styles.item}>WORKS</h1></li>
-              <li className={`${styles.nav_item} ${styles.inactive}`}><h1 className={styles.item}>SKILLS</h1></li>
-              <li className={`${styles.nav_item} ${styles.inactive}`}><h1 className={styles.item}>ABOUT ME</h1></li>
-              <li className={`${styles.nav_item} ${styles.inactive}`}><h1 className={styles.item}>CONTACT</h1></li>
-          </ul>
-          <ul className={styles.nav_icon_list}>
-            <li className={styles.nav_icon}>
-              <Link 
-                  className={styles.icon} 
-                  target='_blank' 
-                  href='https://github.com/makyiabonner'>
-                  <Image 
-                      width='20' 
-                      height='20'
-                      style={{color:'red'}} 
-                      alt='github link' 
-                      src='./icons/github.svg' 
-                  />
-              </Link>
-            </li>
-            <li className={styles.nav_icon}>
-              <Link 
-                  className={styles.icon} 
-                  target='_blank' 
-                  href='https://www.linkedin.com/in/makyiabonner'>
-                  <Image 
-                      width='20' 
-                      height='20'
-                      style={{fill:'red'}} 
-                      alt='linkedin link' 
-                      src='./icons/linkedIn.svg' 
-                  />
-              </Link>
-            </li>
-            <li className={styles.nav_icon}>
-              <Link 
-                  className={styles.icon} 
-                  target='_blank' 
-                  href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'>
-                  <Image 
-                      width='20' 
-                      height='20'
-                      style={{color:'red'}} 
-                      alt='resume link' 
-                      src='./icons/resume.svg' 
-                  />
-              </Link>
-            </li>
-          </ul>
+        <div className={styles.scrollIntoView_div}>
+          <div className={styles.scrollIntoView_box}>
+            <div className={styles.scrollIntoView_ball}></div>
+          </div>
+          <span className={styles.scrollIntoView}>SCROLL TO VIEW</span>
         </div>
+        <NewNav/>
       </section>
     </>
   )
