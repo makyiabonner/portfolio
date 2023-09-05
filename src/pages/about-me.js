@@ -13,35 +13,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.page}>
-        <div className={styles.left_side}>
-            <h1 className={styles.page_name}>ABOUT ME</h1>
-            <div className={styles.left_content}>
-                <p className={styles.left_p}>
-                    As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
-                    My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
-                    or indulging in my love for anime. I&apos;m currently watching on the <i>&quot;Hell&apos;s Paradise&quot;</i> – definitely a good watch. 
-                </p>
-            </div>
+        <div className={styles.main_div}>
+          <div className={styles.title_div}>
+            <span className={styles.span}>SPECIAL THINGS</span>
+            <h1 className={styles.section_title}>ABOUT ME.</h1>
+          </div>
+          <div className={styles.left_content}>
+              <p className={styles.p}>
+                  As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
+                  My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
+                  or indulging in my love for anime. I&apos;m currently watching on the <i>&quot;Hell&apos;s Paradise&quot;</i> – definitely a good watch. 
+              </p>
+          </div>
+          <div className={styles.titles_div}>
+            <div className={styles.titles}>UX DESIGNER</div>
+            <div className={styles.titles}>FRONT-END ENGINEER</div>
+          </div>
         </div>
-        <div className={styles.right_side}>
-                <div className={styles.textbox}>
-                    <p className={styles.p}>
-                      As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
-                      My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
-                      or indulging in my love for anime. I&apos;m currently watching on the <i>&quot;Hell&apos;s Paradise&quot;</i> – definitely a good watch. 
-                    </p>
-                </div>
-                <div className={styles.img_container1}>
-                    <img src="./images/black-guy.webp" alt="" className={styles.img1} />
-                </div>
-                <div className={styles.img_container2}>
-                    <img src="./images/sea.webp" alt="" className={styles.img2} />
-                </div>
-                <div className={styles.img_container3}>
-                    <img src="./images/swimming-lady.webp" alt="" className={styles.img3} />
-                </div>
-        </div>
-        <NewNav mobileBg='#FFDDBD' logoTheme='black' navTextColor='black'/>
+        
       </section>
     </>
   )
