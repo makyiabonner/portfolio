@@ -5,15 +5,18 @@ import styles from '../styles/Skills.module.scss';
 
 export default function Skills(){
     const skills = [
-        {id:'react', pic:'./icons/logo-react.svg', alt:'react'},
-        {id:'html', pic:'./icons/logo-html.svg', alt:'html'},
-        {id:'css', pic:'./icons/logo-css.svg', alt:'css'},
-        {id:'sass', pic:'./icons/logo-sass.svg', alt:'sass'},
-        {id:'javascript', pic:'./icons/logo-js.svg', alt:'javascript'},
-        {id:'bootstrap', pic:'./icons/logo-bootstrap.svg', alt:'bootstrap'},
-        {id:'typescript', pic:'./icons/logo-ts.svg', alt:'typescript'},
-        {id:'nextjs', pic:'./icons/logo-nextjs.svg', alt:'nextjs'}
+        {id:'react', pic:'./icons/white-react.svg', alt:'react'},
+        {id:'html', pic:'./icons/white-html.svg', alt:'html'},
+        {id:'css', pic:'./icons/white-css.svg', alt:'css'},
+        {id:'sass', pic:'./icons/white-sass.svg', alt:'sass'},
+        {id:'javascript', pic:'./icons/white-js.svg', alt:'javascript'},
+        {id:'bootstrap', pic:'./icons/white-bootstrap.svg', alt:'bootstrap'},
+        {id:'typescript', pic:'./icons/white-ts.svg', alt:'typescript'},
+        {id:'nextjs', pic:'./icons/white-nextjs.svg', alt:'nextjs'}
     ]
+    const techStack = skills.map((skill) => {
+        return <img key={skill.id} className={styles.tech_logo} src={skill.pic} alt={skill.alt} />
+    })
     return(
         <>
          <Head>
@@ -23,13 +26,16 @@ export default function Skills(){
             <link rel="icon" href="/favicon.ico" />
          </Head>
          <main className={styles.page}>
-            <section className={styles.left_side}>
-                <div className={styles.left_content}>
-                    {skills.map((skill) => <img key={skill.id} className={styles.tech_logo} src={skill.pic} alt={skill.alt} />)}
+            <section className={styles.main_content}>
+                <div className="d-flex flex-column mx-auto my-4">
+                    <div className={styles.title_div}>
+                        <span className={styles.span}>MY SKILLS</span>
+                        <h1 className={styles.techTitle}>Technologies.</h1>
+                    </div>
+                    <div className={styles.main_grid}>
+                        {techStack}
+                    </div>
                 </div>
-            </section>
-            <section className={styles.right_side}>
-                <h1 className={styles.page_name}>SKILLS</h1>
             </section>
             <NewNav navTextColor='white' mobileBg='black'/>
          </main>

@@ -1,149 +1,71 @@
 .page{
-    display: flex;
-    overflow: hidden;
-    background-color: #FFDDBD;
-    height: 100vh;
-
-}
-.left_side{
-    width: 40vw;
-}
-.right_side{
-    display:grid;
+    display: grid;
     place-items: center;
-    width: 60vw;
-    position: relative;
-    height: 100%;
+    background: url('../../public/images/aboutme-bg.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
-.right_content{
-    left: 45rem;
-    height: 100%;
+.main_div{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.3rem,2vh,2rem);
+    width: clamp(18rem,90vw, 60rem);
 }
-.textbox,.img_container1,.img_container2,.img_container3{
-    position: absolute;
-}
-.page_name::before{
-    content: '//';
-    font-weight: 900;
-    font-size: 5rem;
-}
-.page_name{
-    position: absolute;
+.span,
+.section_title,
+.titles,
+.p{
     font-family: 'Inter';
-    font-weight: 200;
-    font-size: 6em;
-    letter-spacing: 8px;
-    top: 2.9em;
-    left: -2.5em;
-    transform: rotate(270deg);
-    color: black;
 }
-.textbox{
-    background-color: rgba(0, 0, 0, 0.89);
-    padding: 2em;
-    top: 17%;
-    right: 15%;
-    width: clamp(40rem,50vw,60rem);
-    z-index: 5;
+.section_title{
+    margin-top: clamp(1rem,4vw,1.5rem);
 }
-.p,.left_p{
+.section_title,
+.titles{
+    font-weight: 800;
+}
+.p{
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem clamp(1rem,3vw,4rem);
+    line-height: clamp(1.7rem,5vh,2.4rem);
+    font-size: clamp(.85rem,2vw,1.3rem);
     color: white;
-    font-family: 'Inter';
-    line-height: 1.8em;
-    font-size: clamp(.5rem,1.5vw,1.1rem);
 }
-.img1,.img2,.img3{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+.span{
+    font-size: clamp(1rem,2vw,1.4rem);
 }
-.img_container1{
-    z-index: 2;
-    top: 5%;
-    right: 35%;
-    height: clamp(19rem,55vh,44rem);
-    width: clamp(18rem,20vw,35rem);
+.titles,
+.p{
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
 }
-.img_container2{
-    top: 52%;
-    right: 60%;
-    height: clamp(12rem,30vh,18rem);
-    width: clamp(15rem,15vw,30rem);
-    z-index: 1;
+.titles_div{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
 }
-.img_container3{
-    top: 60%;
-    z-index: 3;
-    right: 25%;
-    height: clamp(12rem,20vh,17rem);
-    width: clamp(10rem,20vw,23rem);;
+.titles{
+    background:linear-gradient( 70deg,purple, #00CF9D);
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    width: 48%;
+    height: 220px;
 }
-.left_content{
-    display: none;
-}
-@media (max-width:982px) {
-    .page{
+@media (max-width:536px) {
+    .titles_div{
+        flex-direction: column;
+    }
+    .p{
+        line-height: 1.7rem;
+    }
+    .titles{
         display: flex;
-        height: 100vh;
-        height: 100svh;
-        overflow: hidden;
-        flex-direction: column-reverse;
-    }
-    .right_side{
-        display: grid;
-        overflow: hidden;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 25vh;
-        padding: 0;
-        width: 100vw;
-        height: 25vh;
-        height: 25svh;
-        background-color: black;
-    }
-    .img_container1{
-        grid-column: 3/4;
-    }
-    .img_container2{
-        grid-column: 2/3;
-    }
-    .img_container3{
-        grid-column: 1/2;
-    }
-
-    .img_container1,.img_container2,.img_container3{
-        position: static;
+        align-items: center;
+        font-size: 1.3rem;
         width: 100%;
-        height: 100%;
-        grid-row:1/2;
-        z-index: 0;
-    }
-    .textbox{
-        display: none;
-    }
-    .page_name{
-        width: fit-content;
-        left: -3rem;
-        top: 3.2em;
-        font-size: 1.4rem;
-        z-index: 5;
-        letter-spacing: 2px;
-        color: white;
-    }
-    .page_name::before{
-        font-size: 1.4rem;
-    }
-    .left_side{
-        height: 75vh;
-        height: 75svh;
-        width: 100%;
-        background-color: black;
-    }
-    .left_content{
-        display: block;
-        padding: 2em;
-    }
-    .left_p{
-        text-align: center;
-        font-size: 1em;
+        height: 4rem;
     }
 }
