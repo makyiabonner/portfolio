@@ -27,7 +27,7 @@
 }
 .p{
     margin-top: 1rem;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 2rem clamp(1rem,3vw,4rem);
     line-height: clamp(1.7rem,5vh,2.4rem);
     font-size: clamp(.85rem,2vw,1.3rem);
@@ -39,6 +39,7 @@
 .titles,
 .p{
     border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
 }
 .titles_div{
     display: flex;
