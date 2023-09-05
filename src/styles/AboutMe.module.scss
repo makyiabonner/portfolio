@@ -46,13 +46,27 @@
     gap: 1rem;
     justify-content: space-between;
 }
+@keyframes backgroundGradient {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .titles{
     background:linear-gradient( 70deg,purple, #00CF9D);
     color: white;
     padding: 1.5rem;
     font-size: 1.8rem;
     width: 48%;
+    background-size: 400% 400%;
     height: 220px;
+    animation: backgroundGradient 10s ease infinite;
 }
 @media (max-width:536px) {
     .titles_div{
