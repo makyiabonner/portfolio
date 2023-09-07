@@ -25,7 +25,6 @@ export default function Skills(){
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
          </Head>
-         <main className={styles.page}>
             <section className={styles.main_content}>
                 <div className="d-flex flex-column mx-auto my-4">
                     <div className={styles.title_div}>
@@ -38,7 +37,6 @@ export default function Skills(){
                 </div>
             </section>
             <NewNav navTextColor='white' mobileBg='black'/>
-         </main>
         </>
     )
 }

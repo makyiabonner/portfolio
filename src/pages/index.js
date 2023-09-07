@@ -3,6 +3,10 @@ import Image from 'next/image';
 import NewNav from '../components/NewNav/newNav';
 import styles from '../styles/Home.module.scss';
 import Link from 'next/link';
+import Works from './works';
+import Skills from './skills';
+import AboutMe from './about-me';
+import Contact from './contact';
 
 
 export default function Home() {
@@ -27,6 +31,10 @@ export default function Home() {
         </div>
         <NewNav/>
       </section>
+      <Works/>
+      <Skills/>
+      <AboutMe/>
+      <Contact/>
     </>
   )
 }

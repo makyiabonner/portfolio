@@ -2,12 +2,12 @@
   display: flex;
   padding-bottom:1em;
   padding-left: 5em;
-  overflow: hidden;
   flex-direction: column;
   justify-content: space-around;
+  background: url('../../public/images/skills-bg.svg');
+  background-size: cover;
   height:100vh;
   height: 100svh;
-  width: 100%;
   background-color: black;
 }
 .hero{

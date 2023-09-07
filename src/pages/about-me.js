@@ -3,7 +3,7 @@ import NewNav from '../components/NewNav/newNav';
 import styles from '../styles/AboutMe.module.scss';
 
 
-export default function Home() {
+export default function AboutMe() {
   return (
     <>
       <Head>

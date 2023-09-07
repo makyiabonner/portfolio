@@ -5,7 +5,7 @@ import Link from 'next/link';
 import ContactForm from '@/components/Contact/contactForm';
 
 
-export default function Home() {
+export default function Contact() {
   return (
     <>
       <Head>

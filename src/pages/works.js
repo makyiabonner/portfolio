@@ -6,7 +6,7 @@ import Link from 'next/link';
 import ProjectViewer from '@/components/Project/project';
 
 
-export default function Home() {
+export default function Works() {
   const [ toggleProjectViewer, setToggleProjectViewer] = useState(false)
   const [ highlightDiv, setHighlightDiv ] = useState(null)
   const [activeProjects, setActiveProjects] = useState([]);
