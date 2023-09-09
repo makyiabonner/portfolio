@@ -1,5 +1,6 @@
 .page{
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     height: 100vh;
     background-size: cover;
@@ -91,11 +92,9 @@
     .tech_logo{
         width: 5em;
     }
-    .main_content{
+    .main_grid{
         grid-template-columns: repeat(2, 1fr);
         border-radius: 0;
-        height: 75vh;
-        height: 75svh;
         width: 100%;
         padding: 2em;
     }
