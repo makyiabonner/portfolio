@@ -26,7 +26,7 @@ export default function Skills(){
             <link rel="icon" href="/favicon.ico" />
          </Head>
             <section className={styles.main_content}>
-                <div className="d-flex flex-column mx-auto my-4">
+                <div className={styles.skills_div}>
                     <div className={styles.title_div}>
                         <span className={styles.span}>MY SKILLS</span>
                         <h1 className={styles.techTitle}>Technologies.</h1>

@@ -6,6 +6,16 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.title_div{
+    width: fit-content;
+}
+.skills_div{
+    display: flex;
+    width: clamp(5em,70vw,80em);
+    gap: 5em;
+    align-self: center;
+    flex-direction: column;
+}
 .tech_logo {
     background: rgba(255, 255, 255, 0.11);
     backdrop-filter: blur(8px);
@@ -65,20 +75,14 @@
     font-family: 'Inter';
     width: fit-content;
 }
-.title_div{
-    align-self: start;
-    margin-right: auto;
-    width: fit-content;
-}
 .main_grid{
     align-self: center;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     place-items: center;
     height: clamp(35em,80%,43em);
-    padding-block: 4em;
     column-gap: 10vw;
-    row-gap: 8rem;
+    row-gap: clamp(2rem,10vh,8rem);
     border-radius: 1em;
 }
 @media (max-width:982px) {

@@ -54,7 +54,7 @@ export default function Works() {
       description:`This project is a frontend cooking site skillfully engineered using React, JavaScript, and CSS. Leveraging JavaScript's dynamism and CSS's styling capabilities. This site is fully responsive.`, 
       photo:`./images/gramscooking.webp`, 
       thumbnail:`./images/gramsthumbnail.webp`,
-      bgSize:'clamp(6px,60vw, 18em)',
+      bgSize:'clamp(10em,20vw, 18em)',
       projectViewPic:'./images/gramsbg.webp',
       skills: ['javascript', 'react', 'css']
     },

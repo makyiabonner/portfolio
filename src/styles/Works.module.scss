@@ -2,14 +2,15 @@
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
-    padding: 5em;
     opacity:'100%';
     background-size:'100%';
     background-repeat:'no-repeat';
-    transition: 'all .05s ease-in-out .1s';
+    transition: all .05s ease-in-out .1s;
 }
 .projects_div{
     display: flex;
+    margin: 8em;
+    width: clamp(5em,70vw,80em);
     flex-direction: column;
     gap: 3em;
     align-self: center;
@@ -55,9 +56,6 @@
     height: 13em;
     border-radius: 1em;
 }
-.content1{
-    justify-self: flex-end;
-}
 .content_hover{
     display: grid;
     place-items: center;
@@ -101,7 +99,7 @@
     .content1,
     .content2,
     .content3{
-        width: clamp(16rem,40vw,22rem);
+        width: clamp(16rem,60vw,60rem);
         height: 7rem;
     }
 }
