@@ -91,16 +91,24 @@ export default function Works() {
           transition: 'all .05s ease-in-out .1s'
         }}
       >
-      <div className={`${styles.left_side} ${styles[`left_${highlightDiv}_bg`]} ${hoverBg ? styles.withBoxShadow : ''}`}>
+      <div className={styles.projects_div}>
+        <div className={`${styles.left_side} ${styles[`left_${highlightDiv}_bg`]} ${hoverBg ? styles.withBoxShadow : ''}`}>
+          <span 
+            className={styles.span}
+            style={{
+              color: hoverBg ? 'white' : 'black'
+            }}
+          >
+            CASE STUDIES
+          </span>
           <h1 
-            className={styles.page_name}
+            className={styles.title}
             style={{
               color: hoverBg ? 'white' : 'black'
             }}
         >
-          WORKS
+          PROJECTS.
         </h1>
-           
         </div>
         <div className={styles.right_side}>
             <div className={styles.content_container}>
@@ -125,6 +133,7 @@ export default function Works() {
                   </div>
                 )
               })}
+            </div>
             </div>
         </div>
         <NewNav mobileBg={hoverBg? 'black' : 'white'} logoTheme={hoverBg ? 'white' : 'black'} navTextColor={hoverBg ? 'white' : 'black'}/>

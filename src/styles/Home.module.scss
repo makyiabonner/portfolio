@@ -73,12 +73,12 @@
   }
 }
 .small_title{
-  font-size: clamp(.6rem,3vw,3rem);
+  font-size: clamp(.75rem,3vw,3rem);
   font-weight: 200;
   letter-spacing: .4em;
 }
 .big_title{
-  font-size: clamp(.8rem,5vw,6rem);
+  font-size: clamp(1.2rem,5vw,6rem);
   letter-spacing: .3em;
   font-weight: 800;
 }
