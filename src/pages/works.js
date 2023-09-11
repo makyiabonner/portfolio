@@ -6,7 +6,7 @@ import Link from 'next/link';
 import ProjectViewer from '@/components/Project/project';
 
 
-export default function Home() {
+export default function Works() {
   const [ toggleProjectViewer, setToggleProjectViewer] = useState(false)
   const [ highlightDiv, setHighlightDiv ] = useState(null)
   const [activeProjects, setActiveProjects] = useState([]);
@@ -54,7 +54,7 @@ export default function Home() {
       description:`This project is a frontend cooking site skillfully engineered using React, JavaScript, and CSS. Leveraging JavaScript's dynamism and CSS's styling capabilities. This site is fully responsive.`, 
       photo:`./images/gramscooking.webp`, 
       thumbnail:`./images/gramsthumbnail.webp`,
-      bgSize:'clamp(6px,60vw, 18em)',
+      bgSize:'clamp(10em,20vw, 18em)',
       projectViewPic:'./images/gramsbg.webp',
       skills: ['javascript', 'react', 'css']
     },
@@ -91,16 +91,24 @@ export default function Home() {
           transition: 'all .05s ease-in-out .1s'
         }}
       >
-      <div className={`${styles.left_side} ${styles[`left_${highlightDiv}_bg`]} ${hoverBg ? styles.withBoxShadow : ''}`}>
+      <div className={styles.projects_div}>
+        <div className={`${styles.left_side} ${styles[`left_${highlightDiv}_bg`]} ${hoverBg ? styles.withBoxShadow : ''}`}>
+          <span 
+            className={styles.span}
+            style={{
+              color: hoverBg ? 'white' : 'black'
+            }}
+          >
+            CASE STUDIES
+          </span>
           <h1 
-            className={styles.page_name}
+            className={styles.title}
             style={{
               color: hoverBg ? 'white' : 'black'
             }}
         >
-          WORKS
+          PROJECTS.
         </h1>
-           
         </div>
         <div className={styles.right_side}>
             <div className={styles.content_container}>
@@ -125,6 +133,7 @@ export default function Home() {
                   </div>
                 )
               })}
+            </div>
             </div>
         </div>
         <NewNav mobileBg={hoverBg? 'black' : 'white'} logoTheme={hoverBg ? 'white' : 'black'} navTextColor={hoverBg ? 'white' : 'black'}/>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import ContactForm from '@/components/Contact/contactForm';
 
 
-export default function Home() {
+export default function Contact() {
   return (
     <>
       <Head>
@@ -18,7 +18,7 @@ export default function Home() {
       <video  className={styles.video} autoPlay muted loop>
          <source src="./videos/contact.mp4" type="video/mp4" />
       </video>
-        <main className={`${styles.main} flex-column-reverse align-items-center flex-lg-row w-md-100`}>
+        <main className={`${styles.main} `}>
             <ContactForm/>
         </main>
         <NewNav mobileBg='#23292Aa1' navTextColor='white'/>

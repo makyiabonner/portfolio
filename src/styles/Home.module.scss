@@ -1,13 +1,12 @@
 .home{
   display: flex;
-  padding-bottom:1em;
-  padding-left: 5em;
-  overflow: hidden;
   flex-direction: column;
   justify-content: space-around;
+  background: url('../../public/images/skills-bg.svg');
+  background-size: cover;
   height:100vh;
   height: 100svh;
-  width: 100%;
+  box-sizing: border-box;
   background-color: black;
 }
 .hero{
@@ -74,12 +73,12 @@
   }
 }
 .small_title{
-  font-size: clamp(.6rem,3vw,3rem);
+  font-size: clamp(.75rem,3vw,3rem);
   font-weight: 200;
   letter-spacing: .4em;
 }
 .big_title{
-  font-size: clamp(.8rem,5vw,6rem);
+  font-size: clamp(1.2rem,5vw,6rem);
   letter-spacing: .3em;
   font-weight: 800;
 }

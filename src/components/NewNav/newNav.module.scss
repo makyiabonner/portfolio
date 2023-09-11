@@ -2,12 +2,13 @@
 
 .nav{
   position: fixed;
-  z-index: 99999;
+  z-index: 99;
   top: 0;
   left: 0;
   height: 100%;
-  width: clamp(4em,12%,11em);
-  background-color: rgba(217, 217, 217,.75);
+  width: clamp(1em,9%,11em);
+  background-color: rgba(217, 217, 217, 0.089);
+  backdrop-filter: blur(.8px);
 }
 .nav_item{
   display: flex;
@@ -32,10 +33,10 @@
   content: '';
   position: absolute;
   top: -41%;
-  right: -3%;
+  right: -1%;
   border-radius: 0 0 60% 0;
   background-color: transparent;
-  border-right: 5px solid black;
+  border-right: 1px solid black;
   border-bottom: 5px solid black;
   width: 20px;
   height: 25px;
@@ -44,12 +45,12 @@
   content: '';
   position: absolute;
   bottom: -40%;
-  right: -3%;
+  right: -1%;
   border-radius: 0 60% 0 0;
   background-color: transparent;
-  border-right: 5px solid black;
+  border-right: 1px solid black;
   border-top: 5px solid black;
-  width: 20px;
+  width: 19px;
   height: 25px;
 }
 .nav_icon_list{
@@ -71,7 +72,7 @@
   position: relative;
 }
 .inactive{
-  background-color: #B8B8B8;
+  background-color: #b8b8b84f;
 }
 .nav_item:hover{
   color: white;
