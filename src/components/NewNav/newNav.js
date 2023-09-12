@@ -79,8 +79,8 @@ export default function NewNav(props){
                         target='_blank' 
                         href='https://github.com/makyiabonner'>
                         <Image 
-                            width='20' 
-                            height='20'
+                            width='18' 
+                            height='18'
                             alt='github link' 
                             src='./icons/github.svg' 
                         />
@@ -92,8 +92,8 @@ export default function NewNav(props){
                         target='_blank' 
                         href='https://www.linkedin.com/in/makyiabonner'>
                         <Image 
-                            width='20' 
-                            height='20'
+                            width='16' 
+                            height='16'
                             alt='linkedin link' 
                             src='./icons/linkedIn.svg' 
                         />
@@ -105,8 +105,8 @@ export default function NewNav(props){
                         target='_blank' 
                         href='https://docs.google.com/document/d/1aiLKdgDUF3-jUGbIXilmyvPXX4_fxPgmV409h_utTKg/edit?usp=sharing'>
                         <Image 
-                            width='20' 
-                            height='20'
+                            width='18' 
+                            height='18'
                             style={{color:'red'}} 
                             alt='resume link' 
                             src='./icons/resume.svg' 
