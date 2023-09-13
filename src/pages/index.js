@@ -18,7 +18,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="./favicon.ico" />
       </Head>
-      <section className={styles.home}>
+      <section id='home' className={styles.home}>
         <div className={styles.hero}>
           <h3 className={styles.small_title}>SOFTWARE ENGINEER</h3>
           <h1 className={styles.big_title}>MAKYIA BONNER</h1>
@@ -31,10 +31,10 @@ export default function Home() {
         </div>
         <NewNav/>
       </section>
-      <Works/>
-      <Skills/>
-      <AboutMe/>
-      <Contact/>
+      <section id='works'><Works/></section>
+      <section id='skills'><Skills/></section>
+      <section id='about me'><AboutMe/></section>
+      <section id='contact'><Contact/></section>
     </>
   )
 }

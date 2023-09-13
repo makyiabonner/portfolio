@@ -13,15 +13,19 @@
   backdrop-filter: blur(.8px);
 }
 .nav_item{
+  background-color: #B8B8B8;
+}
+.nav_item,
+.active{
   display: flex;
   align-items: center;
   justify-content: center;
   padding-block: clamp(.3rem,4vw,1.5rem);
   width: 100%;
   height: clamp(2rem,2vh,3rem);
-  background-color: #B8B8B8;
   border-radius: 200px 0 0 200px;
   transition: all .25s;
+  text-decoration: none;
 }
 .item{
   margin: 0;
@@ -32,30 +36,7 @@
   font-size:.9rem;
   letter-spacing: .16rem;
 }
-.active::before{
-  content: '';
-  position: absolute;
-  top: -41%;
-  right: -1%;
-  border-radius: 0 0 60% 0;
-  background-color: transparent;
-  border-right: 1px solid black;
-  border-bottom: 5px solid black;
-  width: 20px;
-  height: 25px;
-}
-.active::after{
-  content: '';
-  position: absolute;
-  bottom: -40%;
-  right: -1%;
-  border-radius: 0 60% 0 0;
-  background-color: transparent;
-  border-right: 1px solid black;
-  border-top: 5px solid black;
-  width: 19px;
-  height: 25px;
-}
+
 .nav_icon_list{
   list-style: none;
   display: flex;
@@ -72,6 +53,8 @@
 .active{
   background-color: black;
   position: relative;
+  opacity: 100%;
+  transition: all .1s;
 }
 .inactive{
   background-color: #b8b8b84f;

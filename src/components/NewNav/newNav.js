@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../NewNav/newNav.module.scss';
-
+import { Link } from 'react-scroll';
 export default function NewNav(props){
     const [showNav, setShowNav] = useState(false);
 
@@ -26,50 +25,60 @@ export default function NewNav(props){
         <>
             <div className={styles.nav}>
                 <ul className={styles.list}>
-                    <li className={`${styles.nav_item} ${styles.active}`}>
-                        <h1 className={styles.item}>HOME</h1>
-                        <img
-                            className={styles.mobile_logo}
-                            width='23'
-                            height='20'
-                            src='./icons/home.webp'
-                        />
+                    <li className={`${styles.nav_item} ${styles.inactive}`}>
+                        <Link activeClass={styles.active} spy to='home'>
+                            <h1 className={styles.item}>HOME</h1>
+                            <img
+                                className={styles.mobile_logo}
+                                width='23'
+                                height='20'
+                                src='./icons/home.webp'
+                            />
+                        </Link>
                     </li>
                     <li className={`${styles.nav_item} ${styles.inactive}`}>
-                        <h1 className={styles.item}>WORKS</h1>
-                        <img
-                            className={styles.mobile_logo}
-                            width='23'
-                            height='20'
-                            src='./icons/works.webp'
-                        />
+                        <Link activeClass={styles.active} spy to='works'>
+                            <h1 className={styles.item}>WORKS</h1>
+                            <img
+                                className={styles.mobile_logo}
+                                width='23'
+                                height='20'
+                                src='./icons/works.webp'
+                            />
+                        </Link>
                     </li>
                     <li className={`${styles.nav_item} ${styles.inactive}`}>
-                        <h1 className={styles.item}>SKILLS</h1>
-                        <img
-                            className={styles.mobile_logo}
-                            width='23'
-                            height='20'
-                            src='./icons/skills.webp'
-                        />
+                        <Link activeClass={styles.active} spy to='skills'>
+                            <h1 className={styles.item}>SKILLS</h1>
+                            <img
+                                className={styles.mobile_logo}
+                                width='23'
+                                height='20'
+                                src='./icons/skills.webp'
+                            />
+                        </Link>
                     </li>
                     <li className={`${styles.nav_item} ${styles.inactive}`}>
-                        <h1 className={styles.item}>ABOUT ME</h1>
-                        <img
-                            className={styles.mobile_logo}
-                            width='23'
-                            height='20'
-                            src='./icons/about-me.webp'
-                        />
+                        <Link activeClass={styles.active} spy to='about me'>
+                            <h1 className={styles.item}>ABOUT ME</h1>
+                            <img
+                                className={styles.mobile_logo}
+                                width='23'
+                                height='20'
+                                src='./icons/about-me.webp'
+                            />
+                        </Link>
                     </li>
                     <li className={`${styles.nav_item} ${styles.inactive}`}>
-                        <h1 className={styles.item}>CONTACT</h1>
-                        <img
-                            className={styles.mobile_logo}
-                            width='23'
-                            height='20'
-                            src='./icons/contact.webp'
-                        />
+                        <Link activeClass={styles.active} spy to='contact'>
+                            <h1 className={styles.item}>CONTACT</h1>
+                            <img
+                                className={styles.mobile_logo}
+                                width='23'
+                                height='20'
+                                src='./icons/contact.webp'
+                            />
+                        </Link>
                     </li>
                 </ul>
                 <ul className={styles.nav_icon_list}>
