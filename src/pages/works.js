@@ -92,7 +92,7 @@ export default function Works() {
         }}
       >
       <div className={styles.projects_div}>
-        <div className={`${styles.left_side} ${styles[`left_${highlightDiv}_bg`]} ${hoverBg ? styles.withBoxShadow : ''}`}>
+          <div className={styles.title_div}>
           <span 
             className={styles.span}
             style={{
