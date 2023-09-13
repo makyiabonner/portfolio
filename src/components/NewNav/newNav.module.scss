@@ -95,6 +95,7 @@
 @media (max-width:1407px) {
   .nav{
     gap: clamp(.5rem,20vh,5rem);
+    min-height: -webkit-fill-available;
   }
   .list{
     height: 30%;
