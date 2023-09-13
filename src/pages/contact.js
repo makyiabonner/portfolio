@@ -21,7 +21,6 @@ export default function Contact() {
         <main className={`${styles.main} `}>
             <ContactForm/>
         </main>
-        <NewNav mobileBg='#23292Aa1' navTextColor='white'/>
       </section>
     </>
   )

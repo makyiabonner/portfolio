@@ -36,7 +36,6 @@ export default function Skills(){
                     </div>
                 </div>
             </section>
-            <NewNav navTextColor='white' mobileBg='black'/>
         </>
     )
 }
