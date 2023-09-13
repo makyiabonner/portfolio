@@ -30,7 +30,7 @@
   font-weight: 800;
   color: white;
   font-size:.9rem;
-  letter-spacing: .30rem;
+  letter-spacing: .16rem;
 }
 .active::before{
   content: '';
@@ -66,9 +66,8 @@
 }
 .icon{
   border-radius: 50%;
-  padding: min(.6vw,3rem);
+  padding: min(.45vw,3rem);
   background-color: #B8B8B8;
-
 }
 .active{
   background-color: black;
@@ -82,6 +81,7 @@
 }
 .list{
   height: 45%;
+  max-height: 20rem;
   margin-top: 1.5em;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@
 .mobile_logo{
   display: none;
 }
-@media (max-width:1282px) {
+@media (max-width:1407px) {
   .nav{
     gap: clamp(.5rem,20vh,5rem);
   }
