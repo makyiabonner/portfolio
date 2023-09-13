@@ -15,7 +15,7 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.page}>
-      <video  className={styles.video} autoPlay muted loop playsInLine>
+      <video className={styles.video} autoPlay muted loop playsInline>
          <source src="./videos/contact.mp4" type="video/mp4" />
       </video>
         <main className={`${styles.main} `}>
