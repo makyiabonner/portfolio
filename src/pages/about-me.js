@@ -22,7 +22,7 @@ export default function AboutMe() {
               <p className={styles.p}>
                   As a front-end engineer, I have a strong passion for coding, gaming, anime, and sports. 
                   My days are primarily spent programming, exploring new programming languages, and avidly following my favorite teams, the Braves, Falcons, and Hawks 
-                  or indulging in my love for anime. I&apos;m currently watching on the <i>&quot;Hell&apos;s Paradise&quot;</i> – definitely a good watch. 
+                  or indulging in my love for anime. I&apos;m currently watching <i>&quot;Hell&apos;s Paradise&quot;</i> – so far it&apos;s definitely been a good watch. 
               </p>
           </div>
           <div className={styles.titles_div}>
