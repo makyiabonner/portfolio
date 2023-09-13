@@ -6,10 +6,10 @@
     background-size:'100%';
     background-repeat:'no-repeat';
     transition: all .05s ease-in-out .1s;
+    padding: 8rem;
 }
 .projects_div{
     display: flex;
-    margin: 8em;
     width: clamp(5em,70vw,80em);
     flex-direction: column;
     gap: 3em;
@@ -78,9 +78,6 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 100vh;
-        height: 100svh;
-        padding: 0;
     }
     .left_grams_bg{
         background-image: url('../../public/images/gramscooking.webp');

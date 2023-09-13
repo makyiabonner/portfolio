@@ -136,7 +136,6 @@ export default function Works() {
             </div>
             </div>
         </div>
-        <NewNav mobileBg={hoverBg? 'black' : 'white'} logoTheme={hoverBg ? 'white' : 'black'} navTextColor={hoverBg ? 'white' : 'black'}/>
       </section>
       <ProjectViewer
         isOpen={toggleProjectViewer}

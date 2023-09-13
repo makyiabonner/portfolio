@@ -53,8 +53,6 @@
 .main_content{
     display: flex;
     flex-direction: column;
-    height: fit-content;
-    width: 100%;
     padding: auto;
     background: linear-gradient(340deg,rgb(100, 83, 83), black);
     padding-block: 10em;
@@ -88,8 +86,6 @@
 @media (max-width:982px) {
     .page{
         display: flex;
-        height: 100vh;
-        height: 100svh;
         flex-direction: column-reverse;
     }
     .tech_logo{
