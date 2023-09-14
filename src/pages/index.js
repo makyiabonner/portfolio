@@ -2,11 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image';
 import NewNav from '../components/NewNav/newNav';
 import styles from '../styles/Home.module.scss';
-import Link from 'next/link';
 import Works from './works';
 import Skills from './skills';
 import AboutMe from './about-me';
 import Contact from './contact';
+import { Link } from 'react-scroll';
 
 
 export default function Home() {
@@ -23,12 +23,14 @@ export default function Home() {
           <h3 className={styles.small_title}>SOFTWARE ENGINEER</h3>
           <h1 className={styles.big_title}>MAKYIA BONNER</h1>
         </div>
-        <div className={styles.scrollIntoView_div}>
-          <div className={styles.scrollIntoView_box}>
-            <div className={styles.scrollIntoView_ball}></div>
+        <Link to='works'>
+          <div className={styles.scrollIntoView_div}>
+            <div className={styles.scrollIntoView_box}>
+              <div className={styles.scrollIntoView_ball}></div>
+            </div>
+              <span className={styles.scrollIntoView}>SCROLL TO VIEW</span>
           </div>
-          <span className={styles.scrollIntoView}>SCROLL TO VIEW</span>
-        </div>
+        </Link>
         <NewNav/>
       </section>
       <section id='works'><Works/></section>
