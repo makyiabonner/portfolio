@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head'
-import NewNav from '../components/NewNav/newNav';
-import styles from '../styles/Works.module.scss';
-import Link from 'next/link';
+import styles from './Works.module.scss';
 import ProjectViewer from '@/components/Project/project';
 
 
@@ -39,7 +37,7 @@ export default function Works() {
       siteLink:`https://makyiabonner-tesla-clone.vercel.app/`,
       codeLink:`https://github.com/makyiabonner/tesla-clone`,
       description:` In this project, I used Next.js for server-side rendering, ensuring optimal performance and SEO. TypeScript enhanced code quality, while Sass streamlined styling with modularity. This site is fully responsive.`, 
-      photo:`./images/teslaclone.webp`, 
+      photo:`./images/tesla-black-bg.webp`, 
       thumbnail:`./images/teslathumbnail.webp`,
       bgSize:'clamp(6px,30vw, 7em)',
       projectViewPic:'./images/teslabg.webp',
@@ -52,7 +50,7 @@ export default function Works() {
       siteLink:`https://gramscooking.netlify.app/`,
       codeLink:`https://github.com/makyiabonner/gramscooking`,
       description:`This project is a frontend cooking site skillfully engineered using React, JavaScript, and CSS. Leveraging JavaScript's dynamism and CSS's styling capabilities. This site is fully responsive.`, 
-      photo:`./images/gramscooking.webp`, 
+      photo:`./images/chef-black-bg.webp`, 
       thumbnail:`./images/gramsthumbnail.webp`,
       bgSize:'clamp(10em,20vw, 18em)',
       projectViewPic:'./images/gramsbg.webp',
@@ -65,7 +63,7 @@ export default function Works() {
       siteLink:``,
       codeLink:`https://github.com/makyiabonner/booking`,
       description:`This project was developed using Next.js, Bootstrap, Sass, and Booking.com API. Seamlessly fusing the power of Next.js for optimal rendering, Bootstrap for streamlined design components, and Sass for modular styling, I've crafted a versatile platform. This site is both responsive and adaptive.`, 
-      photo:`./images/savvybooking.webp`, 
+      photo:`./images/savvy-black-bg.webp`, 
       thumbnail:`./images/savvythumbnail.webp`,
       bgSize:'clamp(6px,60vw, 18em)',
       projectViewPic:'./images/savvybg.webp',
@@ -85,14 +83,14 @@ export default function Works() {
         style={{
           opacity:'100%',
           backgroundImage:`url(${hoverBg})`,
-          backgroundSize:'100%',
-          backgroundPosition:'center 20%',
+          backgroundSize:'cover',
+          backgroundPosition:'center 50%',
           backgroundRepeat:'no-repeat',
-          transition: 'all .05s ease-in-out .1s'
+          transition: 'opacity 1s ease-in-out '
         }}
       >
       <div className={styles.projects_div}>
-        <div className={`${styles.left_side} ${styles[`left_${highlightDiv}_bg`]} ${hoverBg ? styles.withBoxShadow : ''}`}>
+          <div className={styles.title_div}>
           <span 
             className={styles.span}
             style={{
@@ -110,7 +108,7 @@ export default function Works() {
           PROJECTS.
         </h1>
         </div>
-        <div className={styles.right_side}>
+        <div>
             <div className={styles.content_container}>
               {projects.map(project => {
                 return(

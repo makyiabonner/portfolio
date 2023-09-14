@@ -1,7 +1,5 @@
-import NewNav from '@/components/NewNav/newNav';
 import Head from 'next/head';
-import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
-import styles from '../styles/Skills.module.scss';
+import styles from './Skills.module.scss';
 
 export default function Skills(){
     const skills = [

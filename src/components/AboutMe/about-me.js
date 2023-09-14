@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import NewNav from '../components/NewNav/newNav';
-import styles from '../styles/AboutMe.module.scss';
+import styles from './AboutMe.module.scss';
 
 
 export default function AboutMe() {
