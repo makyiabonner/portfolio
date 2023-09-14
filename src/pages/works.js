@@ -110,7 +110,7 @@ export default function Works() {
           PROJECTS.
         </h1>
         </div>
-        <div className={styles.right_side}>
+        <div>
             <div className={styles.content_container}>
               {projects.map(project => {
                 return(
