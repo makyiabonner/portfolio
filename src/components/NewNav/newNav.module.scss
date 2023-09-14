@@ -13,19 +13,23 @@
   backdrop-filter: blur(.8px);
 }
 .nav_item{
-  background-color: #B8B8B8;
+  background-color: #b8b8b8af;
 }
 .nav_item,
 .active{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block: clamp(.3rem,4vw,1.5rem);
+  padding: clamp(.3rem,4vw,1.5rem) 0;
   width: 100%;
   height: clamp(2rem,2vh,3rem);
   border-radius: 200px 0 0 200px;
   transition: all .25s;
-  text-decoration: none;
+  border: none;
+}
+.nav_item:focus,
+.active:focus{
+  outline: none;
 }
 .item{
   margin: 0;
@@ -52,9 +56,7 @@
 }
 .active{
   background-color: black;
-  position: relative;
-  opacity: 100%;
-  transition: all .1s;
+  text-decoration: none;
 }
 .inactive{
   background-color: #b8b8b84f;
