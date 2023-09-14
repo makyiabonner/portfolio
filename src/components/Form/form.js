@@ -1,8 +1,8 @@
-import styles from '../Contact/contact.module.scss'
+import styles from './form.module.scss'
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function ContactForm() {
+function Form() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -73,4 +73,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default Form;

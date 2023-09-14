@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image';
-import NewNav from '../components/NewNav/newNav';
-import styles from '../styles/Home.module.scss';
-import Works from './works';
-import Skills from './skills';
-import AboutMe from './about-me';
-import Contact from './contact';
+import NewNav from '@/components/NewNav/newNav';
+import styles from '@/styles/Home.module.scss';
+import Works from '@/components/Works/works';
+import Skills from '@/components/Skills/skills';
+import AboutMe from '@/components/AboutMe/about-me';
 import { Link } from 'react-scroll';
+import Contact from '@/components/Contact/contact';
 
 
 export default function Home() {
@@ -35,7 +34,7 @@ export default function Home() {
       </section>
       <section id='works'><Works/></section>
       <section id='skills'><Skills/></section>
-      <section id='about me'><AboutMe/></section>
+      <section id='aboutMe'><AboutMe/></section>
       <section id='contact'><Contact/></section>
     </>
   )

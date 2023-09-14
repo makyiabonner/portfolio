@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import NewNav from '../components/NewNav/newNav';
-import styles from '../styles/Contact.module.scss';
-import Link from 'next/link';
-import ContactForm from '@/components/Contact/contactForm';
+import styles from './Contact.module.scss';
+import Form from '@/components/Form/form';
 
 
 export default function Contact() {
@@ -19,7 +17,7 @@ export default function Contact() {
          <source src="./videos/contact.mp4" type="video/mp4" />
       </video>
         <main className={`${styles.main} `}>
-            <ContactForm/>
+            <Form/>
         </main>
       </section>
     </>

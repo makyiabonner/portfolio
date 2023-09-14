@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head'
-import NewNav from '../components/NewNav/newNav';
-import styles from '../styles/Works.module.scss';
-import Link from 'next/link';
+import styles from './Works.module.scss';
 import ProjectViewer from '@/components/Project/project';
 
 

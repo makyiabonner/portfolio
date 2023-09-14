@@ -1,26 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import styles from '../NewNav/newNav.module.scss';
 import { Link } from 'react-scroll';
-export default function NewNav(props){
-    const [showNav, setShowNav] = useState(false);
-
-    const toggleNav = () => {
-        setShowNav((prevShowNav) => !prevShowNav);
-    };
-
-    const NavItem = ({ href, text }) => (
-        <Link style={{textDecoration:'none'}} href={href} passHref>
-            <li>
-                <h5 className={styles.nav_list_item} style={{color:props.navTextColor}}>{text}</h5>
-            </li>
-        </Link>
-    );
-    /*ALL PROPS:
-        logoTheme - logo color
-        mobileBg - mobile nav bg color
-        navTextColor - nav text color
-    */
+export default function NewNav(){
     return (
         <>
             <div className={styles.nav}>
@@ -67,7 +49,7 @@ export default function NewNav(props){
                     </li>
                     <li>
                         <button className={`${styles.nav_item}`}>
-                            <Link activeClass={styles.active} spy to='about me'>
+                            <Link activeClass={styles.active} spy to='aboutMe'>
                                 <h1 className={styles.item}>ABOUT ME</h1>
                                 <img
                                     className={styles.mobile_logo}
